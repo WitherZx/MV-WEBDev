@@ -1,0 +1,124 @@
+"use client";
+
+import React, { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { MonitorPlay, Rocket, ShoppingCart, Store, Headphones, MousePointerClick } from "lucide-react";
+
+const features = [
+    {
+        title: "Infoprodutores",
+        description: "Páginas de vendas altamente otimizadas para escalar seus dígitos.",
+        icon: <MonitorPlay size={32} className="text-accent" />,
+    },
+    {
+        title: "E-commerces & Dropshipping",
+        description: "Lojas virtuais blindadas focadas em LTV.",
+        icon: <ShoppingCart size={32} className="text-accent" />,
+    },
+    {
+        title: "Lançadores & Coprodutores",
+        description: "Estruturas magnéticas de captação de leads e lançamentos explosivos.",
+        icon: <Rocket size={32} className="text-accent" />,
+    },
+    {
+        title: "Negócios Locais",
+        description: "Seja encontrado na sua região e soterre a concorrência no Google.",
+        icon: <Store size={32} className="text-accent" />,
+    },
+    {
+        title: "Agências",
+        description: "Parcerias de desenvolvimento white-label com entrega premium.",
+        icon: <Headphones size={32} className="text-accent" />,
+    },
+    {
+        title: "Gestores de Tráfego",
+        description: "Páginas absurdamente rápidas que derrubam o CPC das suas campanhas.",
+        icon: <MousePointerClick size={32} className="text-accent" />,
+    },
+];
+
+const containerVariants: any = {
+    hidden: { opacity: 0 },
+    show: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.15,
+        },
+    },
+};
+
+const itemVariants: any = {
+    hidden: { opacity: 0, y: 40 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+};
+
+export function BentoFeatures() {
+    const containerRef = useRef<HTMLElement>(null);
+    const { scrollYProgress } = useScroll({
+        target: containerRef,
+        offset: ["start end", "end start"]
+    });
+
+    const glowOpacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
+    const glowScale = useTransform(scrollYProgress, [0, 0.5, 1], [0.8, 1, 0.9]);
+    const titleGlowOpacity = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0, 1, 1, 0]);
+
+    return (
+        <section ref={containerRef} id="beneficios" className="relative w-full py-20 md:py-32 bg-black border-t border-white/5 overflow-hidden">
+            {/* Efeito de luz acendendo e apagando no fundo acompanhando a rolagem */}
+            <motion.div
+                style={{ opacity: glowOpacity, scale: glowScale }}
+                className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(116,40,245,0.08),transparent_50%)] pointer-events-none"
+            />
+
+            <div className="container mx-auto max-w-7xl px-6 relative z-10 w-full">
+
+                {/* Standardized Header */}
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    className="flex flex-col items-center text-center mb-16 md:mb-24 w-full"
+                >
+                    <span className="text-accent text-sm font-bold uppercase tracking-[0.2em] mb-4 block">Público Alvo</span>
+                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tighter mb-6 relative">
+                        Especialista em Atender
+                        {/* Brilho extra sob o título que ascende com o scroll */}
+                        <motion.div style={{ opacity: titleGlowOpacity }} className="absolute -inset-x-4 max-w-sm mx-auto -bottom-2 h-4 bg-accent/20 blur-2xl -z-10" />
+                    </h2>
+                    <p className="text-lg md:text-xl text-zinc-400 font-medium max-w-2xl leading-relaxed">
+                        Desenvolvo ambientes e estruturas exclusivas para cada modelo de negócio faturar mais.
+                    </p>
+                </motion.div>
+
+                {/* Symmetric Grid with Staggered Reveal Animation */}
+                <motion.div
+                    variants={containerVariants}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, margin: "-100px" }}
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 w-full"
+                >
+                    {features.map((feature, index) => (
+                        <motion.div
+                            variants={itemVariants}
+                            key={index}
+                            className="group p-8 md:p-10 rounded-2xl flex flex-col justify-start liquid-glass-card hover:-translate-y-2 transition-transform duration-500 w-full relative"
+                        >
+                            {/* Reflexo luminoso interno do card ao entrar na tela */}
+                            <div className="absolute inset-x-0 top-0 h-[100px] bg-gradient-to-b from-white/[0.03] to-transparent pointer-events-none rounded-t-2xl" />
+
+                            <div className="mb-6 p-4 rounded-xl bg-black/50 border border-white/5 shadow-inner w-fit group-hover:bg-accent/20 group-hover:shadow-[0_0_20px_rgba(116,40,245,0.3)] transition-all duration-500 relative z-10">
+                                {React.cloneElement(feature.icon as React.ReactElement<any>, { size: 32 })}
+                            </div>
+                            <h3 className="text-2xl font-bold mb-4 text-white tracking-tight relative z-10">{feature.title}</h3>
+                            <p className="text-zinc-400 text-base leading-relaxed font-medium group-hover:text-zinc-200 transition-colors relative z-10">{feature.description}</p>
+                        </motion.div>
+                    ))}
+                </motion.div>
+
+            </div>
+        </section>
+    );
+}
