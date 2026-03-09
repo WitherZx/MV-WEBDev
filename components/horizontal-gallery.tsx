@@ -9,17 +9,17 @@ const items = [
     {
         id: 1,
         title: "Asmat",
-        niche: "Engenharia & Arquitetura",
-        description: "Google PageSpeed no topo. Cargas instantâneas.",
-        longDescription: "A Asmat precisava de um portal moderno e direto que refletisse a precisão dos seus projetos estruturais. Desenvolvemos uma vitrine digital focada na performance máxima de carregamento, permitindo que os clientes navegassem pelos variados portfólios de engenharia sem qualquer engasgo de carregamento.",
+        niche: "Cooperativa de Crédito",
+        description: "Acessibilidade e segurança financeira no digital.",
+        longDescription: "A Asmat precisava de um portal seguro e direto que facilitasse o acesso dos cooperados aos serviços financeiros. Desenvolvemos uma vitrine digital com foco em desempenho, transmitindo total credibilidade para novos associados da cooperativa.",
         image: "/imagens/asmat site.jpeg",
     },
     {
         id: 2,
-        title: "Dragisele",
-        niche: "Medicina \& Estética Avançada",
-        description: "Vitrine luxuosa que reflete sua marca.",
-        longDescription: "A Dra. Gisele atua no exigente universo da estética facial e corporal. Criamos um site altamente premium, luxuoso e responsivo que enaltece a qualidade do atendimento clínico. O lead já chega aquecido, sentindo exclusividade desde o primeiro clique.",
+        title: "Dra Gisele",
+        niche: "Estética e Beleza",
+        description: "Vitrine luxuosa que reflete cuidado e elegância.",
+        longDescription: "A Dra. Gisele atua no universo da estética, oferecendo tratamentos faciais e corporais. Criamos um site voltado à conversão e agendamentos, transmitindo uma imagem clean e moderna que passa confiança desde o primeiro clique.",
         image: "/imagens/dragisele site.jpeg",
     },
     {
@@ -41,9 +41,9 @@ const items = [
     {
         id: 5,
         title: "Schifler",
-        niche: "Estúdio de Advocacia",
-        description: "Elegância e autoridade no seu posicionamento online.",
-        longDescription: "Buscando exalar credibilidade em transações jurídicas pesadas, a linguagem visual do escritório Schifler conta com tipografia clássica, cores sóbrias e uma arquitetura focada em instigar o cliente à marcar sua consultoria consultiva.",
+        niche: "Máquinas e Equipamentos",
+        description: "Ferramentas de corte com performance e tecnologia.",
+        longDescription: "A Schifler atua no fornecimento de máquinas e soluções para corte de madeira e materiais pesados. A estrutura arquitetada para o site destaca o catálogo técnico de forma fluida, atendendo negócios do setor B2B com total autoridade.",
         image: "/imagens/schifler.jpeg",
     },
     {
@@ -73,9 +73,9 @@ const items = [
     {
         id: 9,
         title: "SBC",
-        niche: "Consultoria \& Contabilidade",
-        description: "Presença digital forte e impactante.",
-        longDescription: "Soluções empresariais requerem layout claro e navegação óbvia. A Sociedade Brasileira tem a vantagem de ter as sub-áreas delineadas na Home para capturar os usuários do Google assim que aterrissam na página do topo de funil.",
+        niche: "Manutenção & Indústria",
+        description: "Presença corporativa focada em parcerias B2B.",
+        longDescription: "Assim como no setor de qualidade industrial, a SBC precisava expor suas soluções em manutenção de forma técnica e ágil. Desenvolvemos um site corporativo com fluxos otimizados para captura de orçamentos de empresas parceiras no topo do funil.",
         image: "/imagens/SBC site.png",
     },
     {
@@ -97,17 +97,17 @@ const items = [
     {
         id: 12,
         title: "Silvertrend",
-        niche: "E-Commerce de Pratas e Joias",
-        description: "Inovação e tecnologia em um só lugar.",
-        longDescription: "Pratas demandam luz e destaque extremo do produto focado 100% no catálogo com fundo limpo. Tudo foi pensado pra evitar atrito no carrinho de finalização de vendas de moda elegante no Shopify/Woocommerce.",
+        niche: "Estruturas de Alumínio (EUA)",
+        description: "Fabricação de Pool Cages e projetos externos.",
+        longDescription: "Uma companhia americana especializada em estruturas de alumínio como as famosas Pool Cages. O desafio foi transmitir o valor premium nas montagens arquitetônicas por meio de amplas galerias de fotos de alta resolução focadas em converter proprietários em fechar negócio.",
         image: "/imagens/silvertrend.png",
     },
     {
         id: 13,
         title: "MAAHS",
-        niche: "Estúdio de Projetos Majestosos",
-        description: "Excelência visual e foco em resultados.",
-        longDescription: "Um estúdio em seu próprio patamar de criatividade. Animações vívidas percorrem os scrolls deste site e acompanham as ações do projeto entregue como um verdadeiro passeio arquitetônico que convence todo investidor.",
+        niche: "Extração de Pedras e Materiais",
+        description: "Material bruto de qualidade para a construção civil.",
+        longDescription: "Serviço bruto exige credibilidade. A MAAHS foca na extração de pedras e distribuição de materiais de construção fundamentais. Criamos um portal que detalha a qualidade dos minerais e apresenta fácil comunicação comercial interligando grandes contratantes à jazida.",
         image: "/imagens/MAAHS.png",
     },
     {
@@ -129,9 +129,9 @@ const items = [
     {
         id: 16,
         title: "Pellens",
-        niche: "Odontologia & Procedimentos Clínicos",
-        description: "Presença online rápida, robusta e escalável.",
-        longDescription: "Tanto tempo da cadeira da Clínica necessita que o paciente chegue confiante na autoridade do Doutor de cara. Um site aconchegante mas super tecnológico no agendamento e no disparo da urgência.",
+        niche: "Colchões & Conforto",
+        description: "Conforto e qualidade desde o primeiro clique.",
+        longDescription: "Para uma empresa de colchões, o conforto deve ser sentido antes mesmo da compra. Desenvolvemos um site rápido, visualmente aconchegante e otimizado para guiar o cliente na escolha do colchão ideal, focando na elevação das conversões e no design responsivo.",
         image: "/imagens/pellens.png",
     },
 ];
