@@ -8,7 +8,7 @@ export function TrustSignals() {
         {
             icon: <ShieldCheck className="w-8 h-8 text-accent" />,
             title: "Garantia de Satisfação",
-            description: "Comprometimento total com a sua visão. Ajustamos o projeto até que ele supere suas expectativas."
+            description: "Me comprometo a entregar um projeto que supere suas expectativas. Se não estiver satisfeito, ajustamos cada detalhe até que esteja."
         },
         {
             icon: <Zap className="w-8 h-8 text-accent" />,

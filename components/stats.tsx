@@ -53,6 +53,12 @@ function Counter({
 export function Stats() {
     return (
         <div className="container mx-auto px-6 max-w-7xl relative z-10 w-full">
+            <div className="flex flex-col items-center text-center mb-16 md:mb-20 w-full">
+                <span className="text-accent text-sm font-bold uppercase tracking-[0.2em] mb-4 block">Excelência Comprovada</span>
+                <h2 className="text-3xl md:text-5xl font-azonix font-normal text-white">
+                    Resultados que <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-purple-400">Geram Valor</span>
+                </h2>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 w-full">
                 {stats.map((stat, index) => (
                     <motion.div

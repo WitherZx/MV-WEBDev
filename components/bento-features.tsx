@@ -82,10 +82,10 @@ export function BentoFeatures() {
                 >
                     <span className="text-accent text-sm font-semibold uppercase tracking-[0.2em] mb-4 block">Especialidades</span>
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-azonix font-normal text-white mb-6 relative">
-                        Soluções que <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-purple-400">Escalam Negócios</span>
+                        Desenvolvimento <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-purple-400">Personalizado</span>
                     </h2>
                     <p className="text-lg md:text-xl text-zinc-400 font-medium max-w-2xl leading-relaxed">
-                        Uma abordagem personalizada para entender suas necessidades e fornecer soluções eficazes que geram autoridade e lucro.
+                        Trabalho em estreita colaboração com você para entender suas necessidades reais e desenvolver uma solução única para o seu negócio.
                     </p>
                 </motion.div>
 
