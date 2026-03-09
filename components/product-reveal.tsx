@@ -25,9 +25,9 @@ export function ProductReveal() {
             />
 
             <motion.div
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
+                viewport={{ once: true, margin: "-20px" }}
                 transition={{ duration: 0.8 }}
                 className="container mx-auto max-w-7xl px-6 relative z-10 w-full text-center mb-12 md:mb-24"
             >
