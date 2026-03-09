@@ -73,7 +73,6 @@ export function BentoFeatures() {
 
             <div className="container mx-auto max-w-7xl px-6 relative z-10 w-full">
 
-                {/* Standardized Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -81,14 +80,12 @@ export function BentoFeatures() {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     className="flex flex-col items-center text-center mb-16 md:mb-24 w-full"
                 >
-                    <span className="text-accent text-sm font-semibold uppercase tracking-[0.2em] mb-4 block">Serviços</span>
+                    <span className="text-accent text-sm font-semibold uppercase tracking-[0.2em] mb-4 block">Especialidades</span>
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-azonix font-normal text-white mb-6 relative">
-                        Como posso ajudar
-                        {/* Brilho extra sob o título que ascende com o scroll */}
-                        <motion.div style={{ opacity: titleGlowOpacity }} className="absolute -inset-x-4 max-w-sm mx-auto -bottom-2 h-4 bg-accent/20 blur-2xl -z-10" />
+                        Soluções que <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-purple-400">Escalam Negócios</span>
                     </h2>
                     <p className="text-lg md:text-xl text-zinc-400 font-medium max-w-2xl leading-relaxed">
-                        Trabalho com soluções modernas, rápidas e escaláveis, sempre adaptadas às necessidades do seu projeto.
+                        Uma abordagem personalizada para entender suas necessidades e fornecer soluções eficazes que geram autoridade e lucro.
                     </p>
                 </motion.div>
 

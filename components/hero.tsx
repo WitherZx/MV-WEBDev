@@ -37,12 +37,11 @@ export function Hero() {
                 </div>
 
                 <h1 className="mb-6 mx-auto max-w-5xl text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] xl:text-[5rem] font-azonix font-normal leading-tight text-white w-full tracking-normal">
-                    Soluções web que <br className="hidden xl:block" />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-purple-400">geram resultado</span> para o seu negócio.
+                    Aumente sua <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-purple-400 text-glow">presença online</span> com soluções personalizadas.
                 </h1>
 
                 <p className="mb-10 mx-auto max-w-3xl text-sm sm:text-lg md:text-xl xl:text-2xl font-medium leading-relaxed text-zinc-300 tracking-wide w-full px-2">
-                    Especialista em React, Next.js, WordPress e E-commerce. Meu objetivo não é apenas desenvolver, mas criar estruturas que aumentam vendas e geram clientes.
+                    Desenvolvimento de sites e aplicativos web focados em <span className="text-white font-bold italic underline decoration-accent underline-offset-4">alta conversão</span> e performance. Transformamos sua visão em uma ferramenta poderosa de vendas.
                 </p>
 
                 <div className="flex w-full max-w-4xl flex-col items-center justify-center gap-4 sm:flex-row mx-auto">
@@ -51,7 +50,7 @@ export function Hero() {
                         target="_blank"
                         className="magic-button flex w-full sm:w-auto items-center justify-center gap-2 md:gap-3 px-6 py-4 md:px-10 md:py-5 text-sm md:text-lg font-semibold tracking-wide"
                     >
-                        Quero aumentar minhas vendas
+                        Quero aumentar minha presença online
                         <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
                     </Link>
                     <Link

@@ -37,10 +37,10 @@ export function AboutMe() {
 
                     <div className="space-y-6 text-zinc-400 font-medium text-lg md:text-xl leading-relaxed">
                         <p>
-                            Sou desenvolvedor freelancer desde 2019, focado em entregar projetos com alta qualidade, dentro do prazo e com foco em <span className="text-white">resultado real</span> para o cliente.
+                            Sou <span className="text-white">especialista em desenvolvimento web e mobile</span>, focado em transformar ideias complexas em interfaces intuitivas e lucrativas. Atuo no mercado desde 2019, entregando soluções de alta performance para clientes ao redor do mundo.
                         </p>
                         <p>
-                            Meu objetivo não é apenas desenvolver um site ou aplicativo, mas criar soluções que ajudem seu negócio a crescer, seja aumentando vendas, melhorando sua presença online ou criando uma experiência profissional para seus clientes.
+                            Minha abordagem combina design premium com tecnologias de ponta como <span className="text-white">React, Next.js e WordPress</span>. O objetivo é criar estruturas que não apenas funcionam, mas que escalam seu faturamento e consolidam sua autoridade online.
                         </p>
                     </div>
 
