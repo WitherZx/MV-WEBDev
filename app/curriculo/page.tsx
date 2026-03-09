@@ -1,6 +1,6 @@
 import React from "react";
 import { Navbar } from "@/components/navbar";
-import { Instagram, Github, Mail, BrainCircuit } from "lucide-react";
+import { Instagram, Github, Mail, BrainCircuit, ArrowLeft, Briefcase } from "lucide-react";
 import { PrintButton } from "@/components/print-button";
 import Image from "next/image";
 import Link from "next/link";
@@ -59,7 +59,20 @@ export default function CurriculoPage() {
                     }
                 }
             `}} />
-            <main className="relative bg-black text-white min-h-screen w-full pt-32 pb-20 overflow-clip selection:bg-accent/40 selection:text-white font-sans">
+            <main className="relative bg-black text-white min-h-screen w-full pb-20 overflow-clip selection:bg-accent/40 selection:text-white font-sans">
+
+                {/* Fixed Top Bar - No Print */}
+                <nav className="sticky top-0 z-50 w-full bg-black/80 backdrop-blur-md border-b border-white/5 no-print">
+                    <div className="container mx-auto px-6 py-5 flex justify-center">
+                        <Link
+                            href="/"
+                            className="inline-flex items-center gap-2 text-zinc-400 hover:text-white font-semibold transition-all duration-300 group tracking-widest uppercase text-xs"
+                        >
+                            <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform text-accent" />
+                            Voltar ao Portfólio
+                        </Link>
+                    </div>
+                </nav>
 
                 {/* Background ambient glow */}
                 <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-accent/10 blur-[150px] rounded-full pointer-events-none -z-10" />

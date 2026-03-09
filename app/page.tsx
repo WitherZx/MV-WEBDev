@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Navbar } from "@/components/navbar";
 import { Hero } from "@/components/hero";
 import { Stats } from "@/components/stats";
@@ -85,6 +86,7 @@ export default function Home() {
                 <a href="#sobre" className="hover:text-accent transition-colors">Sobre Mim</a>
                 <a href="#beneficios" className="hover:text-accent transition-colors">Serviços</a>
                 <a href="#portfolio" className="hover:text-accent transition-colors">Portfólio</a>
+                <Link href="/curriculo" className="hover:text-accent transition-colors">Currículo</Link>
               </div>
 
               {/* Social Icons */}
