@@ -36,7 +36,7 @@ export function Hero() {
                     </span>
                 </div>
 
-                <h1 className="mb-6 mx-auto max-w-5xl text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] xl:text-[5rem] font-azonix font-normal leading-tight text-white w-full tracking-normal">
+                <h1 className="mb-6 mx-auto max-w-5xl text-3xl sm:text-5xl md:text-6xl lg:text-[4.5rem] xl:text-[5rem] font-azonix font-normal leading-tight text-white w-full tracking-normal">
                     Sites e APPs Web <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-purple-400 text-glow">Personalizados</span> para Aumentar sua Presença Online.
                 </h1>
 
