@@ -8,6 +8,21 @@ const raleway = Raleway({ subsets: ["latin"], weight: ["800", "900"], variable: 
 export const metadata: Metadata = {
   title: "MV WEB DEV | Sites e Apps de Alta Performance",
   description: "Criação de sites exclusivos, rápidos e focados em conversão. Desenvolva sua presença digital com tecnologia de ponta.",
+  icons: {
+    icon: "/imagens/icone.png?v=1",
+    apple: "/imagens/icone.png?v=1",
+  },
+  openGraph: {
+    title: "MV WEB DEV | Sites e Apps de Alta Performance",
+    description: "Criação de sites exclusivos, rápidos e focados em conversão.",
+    images: ["/imagens/icone.png?v=1"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MV WEB DEV | Sites e Apps de Alta Performance",
+    description: "Criação de sites exclusivos, rápidos e focados em conversão.",
+    images: ["/imagens/icone.png?v=1"],
+  },
 };
 
 export default function RootLayout({
