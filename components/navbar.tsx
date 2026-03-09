@@ -6,9 +6,12 @@ import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 
 const navItems = [
-    { name: "Público", href: "/#beneficios" },
-    { name: "Metodologia", href: "/#metodologia" },
+    { name: "Início", href: "/#home" },
     { name: "Portfólio", href: "/#portfolio" },
+    { name: "Depoimentos", href: "/#depoimentos" },
+    { name: "Sobre", href: "/#sobre" },
+    { name: "Serviços", href: "/#beneficios" },
+    { name: "Currículo", href: "/curriculo" },
 ];
 
 export function Navbar() {

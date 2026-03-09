@@ -17,7 +17,7 @@ export function ProductReveal() {
     const glowScale = useTransform(scrollYProgress, [0, 0.5, 1], [0.8, 1, 0.9]);
 
     return (
-        <section ref={containerRef} className="relative flex w-full flex-col items-center justify-center overflow-hidden bg-black py-20 md:py-32 border-t border-white/5">
+        <section ref={containerRef} id="metodologia" className="relative flex w-full flex-col items-center justify-center overflow-hidden bg-black py-20 md:py-32 border-t border-white/5">
             {/* Efeito da luz de fundo rastreando e apagando com o Scroll */}
             <motion.div
                 style={{ opacity: glowOpacity }}

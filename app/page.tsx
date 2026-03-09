@@ -21,6 +21,10 @@ export default function Home() {
         <div className="flex flex-col w-full relative z-0">
           <Hero />
 
+          <HorizontalGallery />
+
+          <Testimonials />
+
           <ScrollText text="VISIBILIDADE CREDIBILIDADE ALTA CONVERSÃO LUCRO IMEDIATO" />
 
           <AboutMe />
@@ -34,10 +38,6 @@ export default function Home() {
           <ProductReveal />
 
           <TechMarquee />
-
-          <HorizontalGallery />
-
-          <Testimonials />
 
           {/* CTA Section */}
           <section className="py-20 md:py-32 bg-black relative w-full border-t border-white/5">

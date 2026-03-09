@@ -75,9 +75,9 @@ export function BentoFeatures() {
 
                 {/* Standardized Header */}
                 <motion.div
-                    initial={{ opacity: 0, y: 30 }}
+                    initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-50px" }}
+                    viewport={{ once: true, margin: "-20px" }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     className="flex flex-col items-center text-center mb-16 md:mb-24 w-full"
                 >
@@ -97,7 +97,7 @@ export function BentoFeatures() {
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="show"
-                    viewport={{ once: true, margin: "-100px" }}
+                    viewport={{ once: true, margin: "-20px" }}
                     className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 w-full"
                 >
                     {features.map((feature, index) => (
