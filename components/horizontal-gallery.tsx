@@ -159,32 +159,33 @@ export function HorizontalGallery() {
                 {/* Symmetric Grid representing Portfolio/Gallery items */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 w-full">
                     {items.map((item) => (
-                        <div
+                        <motion.div
                             key={item.id}
                             onClick={() => setSelectedItem(item)}
-                            className="group relative flex w-full aspect-video rounded-2xl md:rounded-3xl overflow-hidden liquid-glass-card shadow-lg hover:-translate-y-2 cursor-pointer transition-transform duration-500"
+                            whileTap={{ scale: 0.98 }}
+                            className="group relative flex w-full aspect-video rounded-2xl md:rounded-3xl overflow-hidden liquid-glass-card shadow-lg hover:-translate-y-2 active:-translate-y-2 cursor-pointer transition-all duration-500"
                         >
                             <Image
                                 src={item.image}
                                 alt={item.title}
                                 fill
-                                className="object-cover object-top opacity-50 group-hover:opacity-100 transition-opacity duration-700"
+                                className="object-cover object-top opacity-50 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-700"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent pointer-events-none z-10" />
 
-                            <div className="absolute top-4 right-4 md:top-6 md:right-6 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center opacity-0 -translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 z-20 hover:bg-white hover:text-black">
+                            <div className="absolute top-4 right-4 md:top-6 md:right-6 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center opacity-0 -translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 group-active:opacity-100 group-active:translate-y-0 transition-all duration-300 z-20 hover:bg-white hover:text-black">
                                 <ArrowUpRight size={20} />
                             </div>
 
-                            <div className="relative z-20 flex flex-col justify-end p-6 md:p-8 text-left w-full h-full md:translate-y-4 md:group-hover:translate-y-0 transition-transform duration-500">
+                            <div className="relative z-20 flex flex-col justify-end p-6 md:p-8 text-left w-full h-full md:translate-y-4 md:group-hover:translate-y-0 group-active:translate-y-0 transition-transform duration-500">
                                 <h4 className="text-xl md:text-2xl font-semibold text-white mb-2 leading-tight tracking-tight">
                                     {item.title}
                                 </h4>
-                                <p className="text-sm md:text-base text-zinc-400 font-medium leading-relaxed group-hover:text-zinc-200 transition-colors">
+                                <p className="text-sm md:text-base text-zinc-400 font-medium leading-relaxed group-hover:text-zinc-200 group-active:text-zinc-200 transition-colors">
                                     {item.description}
                                 </p>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>

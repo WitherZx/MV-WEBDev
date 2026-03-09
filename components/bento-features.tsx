@@ -104,16 +104,17 @@ export function BentoFeatures() {
                         <motion.div
                             variants={itemVariants}
                             key={index}
-                            className="group p-8 md:p-10 rounded-2xl flex flex-col justify-start liquid-glass-card hover:-translate-y-2 transition-transform duration-500 w-full relative"
+                            whileTap={{ scale: 0.98 }}
+                            className="group p-8 md:p-10 rounded-2xl flex flex-col justify-start liquid-glass-card hover:-translate-y-2 active:-translate-y-2 transition-all duration-500 w-full relative"
                         >
                             {/* Reflexo luminoso interno do card ao entrar na tela */}
                             <div className="absolute inset-x-0 top-0 h-[100px] bg-gradient-to-b from-white/[0.03] to-transparent pointer-events-none rounded-t-2xl" />
 
-                            <div className="mb-6 p-4 rounded-xl bg-black/50 border border-white/5 shadow-inner w-fit group-hover:bg-accent/20 group-hover:shadow-[0_0_20px_rgba(116,40,245,0.3)] transition-all duration-500 relative z-10">
+                            <div className="mb-6 p-4 rounded-xl bg-black/50 border border-white/5 shadow-inner w-fit group-hover:bg-accent/20 group-hover:shadow-[0_0_20px_rgba(116,40,245,0.3)] group-active:bg-accent/20 group-active:shadow-[0_0_20px_rgba(116,40,245,0.3)] transition-all duration-500 relative z-10">
                                 {React.cloneElement(feature.icon as React.ReactElement<any>, { size: 32 })}
                             </div>
                             <h3 className="text-2xl font-semibold mb-4 text-white tracking-tight relative z-10">{feature.title}</h3>
-                            <p className="text-zinc-400 text-base leading-relaxed font-medium group-hover:text-zinc-200 transition-colors relative z-10">{feature.description}</p>
+                            <p className="text-zinc-400 text-base leading-relaxed font-medium group-hover:text-zinc-200 group-active:text-zinc-200 transition-colors relative z-10">{feature.description}</p>
                         </motion.div>
                     ))}
                 </motion.div>

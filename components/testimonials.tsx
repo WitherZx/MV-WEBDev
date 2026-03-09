@@ -112,10 +112,10 @@ export function Testimonials() {
                     {reviews.map((review, i) => (
                         <motion.div
                             key={review.id}
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: 10 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-20px" }}
-                            transition={{ duration: 0.6, delay: i * 0.1 }}
+                            viewport={{ once: true, margin: "0px" }}
+                            transition={{ duration: 0.5, ease: "easeOut" }}
                             className="flex flex-col p-8 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-accent/40 shadow-xl liquid-glass group transition-all duration-500 hover:-translate-y-2 relative"
                         >
                             <Quote size={40} className="text-white/10 absolute top-6 right-6 group-hover:text-accent/20 transition-colors duration-500" />
