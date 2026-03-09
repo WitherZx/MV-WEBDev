@@ -25,7 +25,7 @@ export default function Home() {
 
           <AboutMe />
 
-          <div className="py-20 bg-zinc-950/20 backdrop-blur-3xl relative z-20">
+          <div className="py-20 bg-zinc-950/20 backdrop-blur-3xl relative z-20 border-t border-white/5">
             <Stats />
           </div>
 

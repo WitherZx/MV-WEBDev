@@ -39,51 +39,48 @@ export function ProductReveal() {
             </motion.div>
 
             <div className="container mx-auto max-w-7xl px-6 relative z-10 w-full">
-                {/* Janela Panorâmica Cinemática */}
-                <div className="relative flex w-full flex-col overflow-hidden rounded-[2rem] md:rounded-[4rem] border border-white/10 shadow-[0_40px_120px_rgba(116,40,245,0.2)] group liquid-glass-card hover:translate-y-0 p-0 mx-auto min-h-[500px] md:min-h-[0px] md:aspect-[16/9] lg:aspect-[21/9]">
-                    {/* Background preenche o contêiner por absoluto */}
-                    <div className="absolute inset-0 z-0">
+                {/* Container Pai Unificado */}
+                <div className="relative flex w-full flex-col p-4 md:p-8 rounded-[2rem] md:rounded-[4rem] border border-white/10 shadow-[0_40px_120px_rgba(116,40,245,0.3)] liquid-glass-card gap-8 md:gap-12 overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent pointer-events-none" />
+
+                    {/* Janela de Vídeo Principal 16:9 */}
+                    <div className="relative w-full aspect-video rounded-[1.5rem] md:rounded-[3rem] overflow-hidden border border-white/10 group shadow-2xl z-10">
                         <video
                             autoPlay
                             loop
                             muted
                             playsInline
-                            className="absolute inset-0 w-full h-full object-cover opacity-60 transition-transform duration-[2s] group-hover:scale-105"
+                            className="absolute inset-0 w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105"
                         >
                             <source src="/imagens/video.mp4" type="video/mp4" />
                         </video>
-                        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 md:via-black/60 to-transparent pointer-events-none" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
                     </div>
 
-                    {/* Conteúdo flexível fixado no rodapé */}
-                    <div className="relative z-10 px-4 md:px-6 flex-1 flex flex-col justify-end mt-[250px] md:mt-0 pt-0 pb-6 md:pb-16 w-full h-full">
-                        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 md:gap-4 w-full max-w-5xl mx-auto backdrop-blur-3xl bg-black/60 p-6 md:p-12 rounded-[1.5rem] md:rounded-[2rem] border border-white/10 shadow-2xl mt-auto">
+                    {/* Grid de Metodologia/Passos abaixo do vídeo */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 w-full relative z-10">
+                        {/* Passo 1 */}
+                        <div className="flex-1 text-left relative group w-full bg-black/40 p-6 md:p-8 rounded-[1.5rem] md:rounded-[2rem] border border-white/5 shadow-inner hover:border-accent/40 transition-all duration-500 overflow-hidden">
+                            <div className="absolute -left-0 top-0 bottom-0 w-1 bg-accent rounded-full scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-top" />
+                            <h4 className="text-accent text-3xl md:text-5xl font-azonix font-normal mb-3 opacity-50">01</h4>
+                            <p className="text-white text-lg md:text-xl font-bold mb-2 tracking-tight">Contato Imediato</p>
+                            <p className="text-zinc-400 font-medium text-xs md:text-sm leading-relaxed">Discutiremos suas necessidades para encontrar a melhor solução técnica para o seu negócio.</p>
+                        </div>
 
-                            <div className="flex-1 text-left relative group w-full">
-                                <div className="absolute -left-4 md:-left-6 top-0 bottom-0 w-1 bg-accent rounded-full md:scale-y-0 md:group-hover:scale-y-100 transition-transform duration-500 origin-top" />
-                                <h4 className="text-accent text-3xl md:text-4xl font-semibold mb-2 md:mb-3 opacity-50">1</h4>
-                                <p className="text-white text-lg md:text-xl font-semibold mb-2 tracking-tight">Contato Imediato</p>
-                                <p className="text-zinc-400 font-medium text-xs md:text-sm leading-relaxed">Discutiremos suas necessidades para a melhor solução.</p>
-                            </div>
+                        {/* Passo 2 */}
+                        <div className="flex-1 text-left relative group w-full bg-black/40 p-6 md:p-8 rounded-[1.5rem] md:rounded-[2rem] border border-white/5 shadow-inner hover:border-accent/40 transition-all duration-500 overflow-hidden">
+                            <div className="absolute -left-0 top-0 bottom-0 w-1 bg-accent rounded-full scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-top" />
+                            <h4 className="text-accent text-3xl md:text-5xl font-azonix font-normal mb-3 opacity-50">02</h4>
+                            <p className="text-white text-lg md:text-xl font-bold mb-2 tracking-tight">Desenvolvimento</p>
+                            <p className="text-zinc-400 font-medium text-xs md:text-sm leading-relaxed">Alta performance com React/Next.js ou agilidade e flexibilidade usando WordPress de alto nível.</p>
+                        </div>
 
-                            <div className="hidden md:block w-[1px] h-24 bg-white/10" />
-
-                            <div className="flex-1 text-left relative group w-full">
-                                <div className="absolute -left-4 md:-left-6 top-0 bottom-0 w-1 bg-accent rounded-full md:scale-y-0 md:group-hover:scale-y-100 transition-transform duration-500 origin-top" />
-                                <h4 className="text-accent text-3xl md:text-4xl font-semibold mb-2 md:mb-3 opacity-50">2</h4>
-                                <p className="text-white text-lg md:text-xl font-semibold mb-2 tracking-tight">Desenvolvimento</p>
-                                <p className="text-zinc-400 font-medium text-xs md:text-sm leading-relaxed">Alta performance com código React ou velocidade usando WordPress e Elementor!</p>
-                            </div>
-
-                            <div className="hidden md:block w-[1px] h-24 bg-white/10" />
-
-                            <div className="flex-1 text-left relative group w-full">
-                                <div className="absolute -left-4 md:-left-6 top-0 bottom-0 w-1 bg-accent rounded-full md:scale-y-0 md:group-hover:scale-y-100 transition-transform duration-500 origin-top" />
-                                <h4 className="text-accent text-3xl md:text-4xl font-semibold mb-2 md:mb-3 opacity-50">3</h4>
-                                <p className="text-white text-lg md:text-xl font-semibold mb-2 tracking-tight">Entrega</p>
-                                <p className="text-zinc-400 font-medium text-xs md:text-sm leading-relaxed">Revisões finais para um resultado perfeito.</p>
-                            </div>
-
+                        {/* Passo 3 */}
+                        <div className="flex-1 text-left relative group w-full bg-black/40 p-6 md:p-8 rounded-[1.5rem] md:rounded-[2rem] border border-white/5 shadow-inner hover:border-accent/40 transition-all duration-500 overflow-hidden">
+                            <div className="absolute -left-0 top-0 bottom-0 w-1 bg-accent rounded-full scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-top" />
+                            <h4 className="text-accent text-3xl md:text-5xl font-azonix font-normal mb-3 opacity-50">03</h4>
+                            <p className="text-white text-lg md:text-xl font-bold mb-2 tracking-tight">Entrega & Suporte</p>
+                            <p className="text-zinc-400 font-medium text-xs md:text-sm leading-relaxed">Revisões finais detalhadas para um resultado impecável e acompanhamento do pós-lançamento.</p>
                         </div>
                     </div>
                 </div>

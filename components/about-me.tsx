@@ -85,25 +85,25 @@ export function AboutMe() {
                         <div className="relative z-10 w-full h-[1px] bg-white/10" />
 
                         <div className="relative z-10 flex flex-col gap-4">
-                            <div className="flex justify-between items-center">
-                                <span className="text-zinc-500 font-semibold uppercase tracking-widest text-xs">Experiência</span>
-                                <span className="text-white font-semibold">2019 - Presente</span>
+                            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 sm:gap-4">
+                                <span className="text-zinc-500 font-semibold uppercase tracking-widest text-[10px] sm:text-xs">Experiência</span>
+                                <span className="text-white font-semibold text-sm sm:text-base">2019 - Presente</span>
                             </div>
-                            <div className="flex justify-between items-center">
-                                <span className="text-zinc-500 font-semibold uppercase tracking-widest text-xs">Localização</span>
-                                <span className="text-white font-semibold">Curitiba, BR</span>
+                            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 sm:gap-4">
+                                <span className="text-zinc-500 font-semibold uppercase tracking-widest text-[10px] sm:text-xs">Localização</span>
+                                <span className="text-white font-semibold text-sm sm:text-base">Curitiba, BR</span>
                             </div>
-                            <div className="flex justify-between items-center">
-                                <span className="text-zinc-500 font-semibold uppercase tracking-widest text-xs">Atuação</span>
-                                <span className="text-white font-semibold whitespace-nowrap overflow-hidden text-ellipsis pl-4">Global</span>
+                            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 sm:gap-4">
+                                <span className="text-zinc-500 font-semibold uppercase tracking-widest text-[10px] sm:text-xs">Atuação</span>
+                                <span className="text-white font-semibold text-sm sm:text-base">Global</span>
                             </div>
-                            <div className="flex justify-between items-center gap-4">
-                                <span className="text-zinc-500 font-semibold uppercase tracking-widest text-xs">E-mail</span>
-                                <a href="mailto:marcos.contatoprof@gmail.com" className="text-white font-semibold text-right hover:text-accent transition-colors truncate">marcos.contatoprof@gmail.com</a>
+                            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 sm:gap-4">
+                                <span className="text-zinc-500 font-semibold uppercase tracking-widest text-[10px] sm:text-xs">E-mail</span>
+                                <a href="mailto:marcos.contatoprof@gmail.com" className="text-white font-semibold hover:text-accent transition-colors break-all sm:break-normal sm:truncate text-sm sm:text-base">marcos.contatoprof@gmail.com</a>
                             </div>
-                            <div className="flex justify-between items-center">
-                                <span className="text-zinc-500 font-semibold uppercase tracking-widest text-xs">WhatsApp</span>
-                                <a href="https://api.whatsapp.com/send?phone=554198364028" target="_blank" className="text-white font-semibold hover:text-accent transition-colors">+55 41 9836-4028</a>
+                            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 sm:gap-4">
+                                <span className="text-zinc-500 font-semibold uppercase tracking-widest text-[10px] sm:text-xs">WhatsApp</span>
+                                <a href="https://api.whatsapp.com/send?phone=554198364028" target="_blank" className="text-white font-semibold hover:text-accent transition-colors text-sm sm:text-base">+55 41 9836-4028</a>
                             </div>
                         </div>
 
