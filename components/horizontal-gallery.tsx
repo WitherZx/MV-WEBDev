@@ -39,6 +39,66 @@ const items = [
         description: "Infraestrutura escalável para resultados absurdos.",
         image: "/imagens/solumade.jpeg",
     },
+    {
+        id: 7,
+        title: "Kayu",
+        description: "Design moderno e elegante para sua marca.",
+        image: "/imagens/Kayu.png",
+    },
+    {
+        id: 8,
+        title: "Master Quality",
+        description: "Excelência e qualidade em cada detalhe.",
+        image: "/imagens/Master quality.png",
+    },
+    {
+        id: 9,
+        title: "SBC",
+        description: "Presença digital forte e impactante.",
+        image: "/imagens/SBC site.png",
+    },
+    {
+        id: 10,
+        title: "Bragança",
+        description: "Soluções visuais que convertem clientes.",
+        image: "/imagens/braganca.png",
+    },
+    {
+        id: 11,
+        title: "Echlin",
+        description: "Performance e design aliados para o sucesso.",
+        image: "/imagens/echlin.png",
+    },
+    {
+        id: 12,
+        title: "Silvertrend",
+        description: "Inovação e tecnologia em um só lugar.",
+        image: "/imagens/silvertrend.png",
+    },
+    {
+        id: 13,
+        title: "MAAHS",
+        description: "Excelência visual e foco em resultados.",
+        image: "/imagens/MAAHS.png",
+    },
+    {
+        id: 14,
+        title: "Henval",
+        description: "Autoridade e confiança no ambiente digital.",
+        image: "/imagens/henval.png",
+    },
+    {
+        id: 15,
+        title: "Lamobel",
+        description: "Estilo e sofisticação para destacar o seu negócio.",
+        image: "/imagens/lamobel.png",
+    },
+    {
+        id: 16,
+        title: "Pellens",
+        description: "Presença online rápida, robusta e escalável.",
+        image: "/imagens/pellens.png",
+    },
 ];
 
 export function HorizontalGallery() {
