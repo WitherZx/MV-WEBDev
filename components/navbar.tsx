@@ -39,52 +39,54 @@ export function Navbar() {
     }, [mobileMenuOpen]);
 
     return (
-        <nav
-            className={cn(
-                "fixed top-0 left-0 right-0 z-40 transition-all duration-300 w-full border-b outline-none",
-                isScrolled
-                    ? "py-4 bg-black/80 backdrop-blur-2xl border-white/5 shadow-2xl"
-                    : "py-6 bg-transparent border-transparent shadow-none"
-            )}
-        >
-            <div className="container mx-auto max-w-7xl px-6 flex items-center justify-between">
-                <Link href="/" className="text-2xl font-black tracking-tighter text-white">
-                    MV WEB <span className="text-accent underline decoration-accent/30 underline-offset-4">DEV</span>
-                </Link>
-
-                {/* Desktop Nav */}
-                <div className="hidden md:flex items-center gap-10">
-                    {navItems.map((item) => (
-                        <Link
-                            key={item.name}
-                            href={item.href}
-                            className="text-[13px] font-bold text-zinc-400 hover:text-white transition-all uppercase tracking-[0.1em]"
-                        >
-                            {item.name}
-                        </Link>
-                    ))}
-                    <Link
-                        href="https://api.whatsapp.com/send?phone=554198364028"
-                        target="_blank"
-                        className="px-8 py-3 rounded-full bg-white text-black text-sm font-black uppercase tracking-widest hover:bg-zinc-200 transition-all active:scale-95 shadow-xl ml-4"
-                    >
-                        Fale Comigo
+        <>
+            <header
+                className={cn(
+                    "fixed top-0 left-0 right-0 z-50 transition-all duration-300 w-full border-b outline-none",
+                    isScrolled
+                        ? "py-4 bg-black/80 backdrop-blur-2xl border-white/5 shadow-2xl"
+                        : "py-6 bg-transparent border-transparent shadow-none"
+                )}
+            >
+                <div className="container mx-auto max-w-7xl px-6 flex items-center justify-between">
+                    <Link href="/" className="text-2xl font-raleway font-black tracking-tighter text-white">
+                        MV WEB <span className="text-accent underline decoration-accent/30 underline-offset-4">DEV</span>
                     </Link>
-                </div>
 
-                {/* Mobile Toggle (Hamburger) */}
-                <button
-                    className="md:hidden p-2 text-white"
-                    onClick={() => setMobileMenuOpen(true)}
-                >
-                    <Menu size={28} />
-                </button>
-            </div>
+                    {/* Desktop Nav */}
+                    <nav className="hidden md:flex items-center gap-10">
+                        {navItems.map((item) => (
+                            <Link
+                                key={item.name}
+                                href={item.href}
+                                className="text-[13px] font-semibold text-zinc-400 hover:text-white transition-all uppercase tracking-[0.1em]"
+                            >
+                                {item.name}
+                            </Link>
+                        ))}
+                        <Link
+                            href="https://api.whatsapp.com/send?phone=554198364028"
+                            target="_blank"
+                            className="px-8 py-3 rounded-full bg-white text-black text-sm font-semibold uppercase tracking-widest transition-all duration-300 hover:bg-accent hover:text-white hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(116,40,245,0.4)] active:scale-95 ml-4"
+                        >
+                            Fale Comigo
+                        </Link>
+                    </nav>
+
+                    {/* Mobile Toggle (Hamburger) */}
+                    <button
+                        className="md:hidden p-2 text-white"
+                        onClick={() => setMobileMenuOpen(true)}
+                    >
+                        <Menu size={28} />
+                    </button>
+                </div>
+            </header>
 
             {/* Mobile Menu Backdrop */}
             <div
                 className={cn(
-                    "fixed inset-0 bg-black/60 backdrop-blur-sm z-[50] md:hidden transition-opacity duration-300",
+                    "fixed inset-0 bg-black/60 backdrop-blur-sm z-[80] md:hidden transition-opacity duration-300",
                     mobileMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
                 )}
                 onClick={() => setMobileMenuOpen(false)}
@@ -93,12 +95,12 @@ export function Navbar() {
             {/* Mobile Menu Drawer (Right Sidebar) */}
             <div
                 className={cn(
-                    "fixed top-0 right-0 bottom-0 w-[80%] max-w-sm bg-zinc-950 border-l border-white/5 z-[60] md:hidden transition-transform duration-300 ease-in-out p-6 flex flex-col shadow-2xl",
+                    "fixed top-0 right-0 bottom-0 w-[80%] max-w-sm bg-zinc-950 border-l border-white/5 z-[90] md:hidden transition-transform duration-300 ease-in-out p-6 flex flex-col shadow-2xl",
                     mobileMenuOpen ? "translate-x-0" : "translate-x-full"
                 )}
             >
                 <div className="flex items-center justify-between mb-12">
-                    <Link href="/" className="text-xl font-black tracking-tighter text-white" onClick={() => setMobileMenuOpen(false)}>
+                    <Link href="/" className="text-xl font-raleway font-black tracking-tighter text-white" onClick={() => setMobileMenuOpen(false)}>
                         MV WEB <span className="text-accent underline decoration-accent/30 underline-offset-4">DEV</span>
                     </Link>
                     <button
@@ -109,7 +111,7 @@ export function Navbar() {
                     </button>
                 </div>
 
-                <div className="flex flex-col gap-6 font-bold text-lg">
+                <div className="flex flex-col gap-6 font-semibold text-lg">
                     {navItems.map((item) => (
                         <Link
                             key={item.name}
@@ -126,13 +128,13 @@ export function Navbar() {
                     <Link
                         href="https://api.whatsapp.com/send?phone=554198364028"
                         target="_blank"
-                        className="flex w-full py-4 justify-center rounded-xl bg-white text-black text-center text-sm font-black uppercase tracking-widest shadow-lg hover:bg-zinc-200 active:scale-95 transition-all"
+                        className="flex w-full py-4 justify-center rounded-xl bg-white text-black text-center text-sm font-semibold uppercase tracking-widest shadow-lg transition-all duration-300 hover:bg-accent hover:text-white hover:shadow-[0_0_20px_rgba(116,40,245,0.4)] hover:-translate-y-1 active:scale-95"
                         onClick={() => setMobileMenuOpen(false)}
                     >
                         Falar no WhatsApp
                     </Link>
                 </div>
             </div>
-        </nav>
+        </>
     );
 }

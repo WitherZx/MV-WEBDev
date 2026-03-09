@@ -2,38 +2,38 @@
 
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { MonitorPlay, Rocket, ShoppingCart, Store, Headphones, MousePointerClick } from "lucide-react";
+import { MonitorPlay, Rocket, ShoppingCart, Smartphone, Search, Palette } from "lucide-react";
 
 const features = [
     {
-        title: "Infoprodutores",
-        description: "Páginas de vendas altamente otimizadas para escalar seus dígitos.",
+        title: "Sites & Landing Pages",
+        description: "Criar sites profissionais e landing pages de alta conversão.",
         icon: <MonitorPlay size={32} className="text-accent" />,
     },
     {
-        title: "E-commerces & Dropshipping",
-        description: "Lojas virtuais blindadas focadas em LTV.",
+        title: "Aplicações Web e Mobile",
+        description: "Desenvolver aplicações web e mobile com as melhores tecnologias.",
+        icon: <Smartphone size={32} className="text-accent" />,
+    },
+    {
+        title: "E-commerces",
+        description: "Estruturar ou melhorar seu e-commerce para aumentar suas vendas.",
         icon: <ShoppingCart size={32} className="text-accent" />,
     },
     {
-        title: "Lançadores & Coprodutores",
-        description: "Estruturas magnéticas de captação de leads e lançamentos explosivos.",
+        title: "Presença Digital",
+        description: "Posicionar seu negócio do zero na internet e gerar autoridade.",
         icon: <Rocket size={32} className="text-accent" />,
     },
     {
-        title: "Negócios Locais",
-        description: "Seja encontrado na sua região e soterre a concorrência no Google.",
-        icon: <Store size={32} className="text-accent" />,
+        title: "Performance & SEO",
+        description: "Melhorar a performance, a experiência do usuário e o seu SEO.",
+        icon: <Search size={32} className="text-accent" />,
     },
     {
-        title: "Agências",
-        description: "Parcerias de desenvolvimento white-label com entrega premium.",
-        icon: <Headphones size={32} className="text-accent" />,
-    },
-    {
-        title: "Gestores de Tráfego",
-        description: "Páginas absurdamente rápidas que derrubam o CPC das suas campanhas.",
-        icon: <MousePointerClick size={32} className="text-accent" />,
+        title: "UX/UI Design",
+        description: "Prototipagem de interfaces funcionais focadas na experiência.",
+        icon: <Palette size={32} className="text-accent" />,
     },
 ];
 
@@ -81,14 +81,14 @@ export function BentoFeatures() {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     className="flex flex-col items-center text-center mb-16 md:mb-24 w-full"
                 >
-                    <span className="text-accent text-sm font-bold uppercase tracking-[0.2em] mb-4 block">Público Alvo</span>
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tighter mb-6 relative">
-                        Especialista em Atender
+                    <span className="text-accent text-sm font-semibold uppercase tracking-[0.2em] mb-4 block">Serviços</span>
+                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-azonix font-normal text-white mb-6 relative">
+                        Como posso ajudar
                         {/* Brilho extra sob o título que ascende com o scroll */}
                         <motion.div style={{ opacity: titleGlowOpacity }} className="absolute -inset-x-4 max-w-sm mx-auto -bottom-2 h-4 bg-accent/20 blur-2xl -z-10" />
                     </h2>
                     <p className="text-lg md:text-xl text-zinc-400 font-medium max-w-2xl leading-relaxed">
-                        Desenvolvo ambientes e estruturas exclusivas para cada modelo de negócio faturar mais.
+                        Trabalho com soluções modernas, rápidas e escaláveis, sempre adaptadas às necessidades do seu projeto.
                     </p>
                 </motion.div>
 
@@ -112,7 +112,7 @@ export function BentoFeatures() {
                             <div className="mb-6 p-4 rounded-xl bg-black/50 border border-white/5 shadow-inner w-fit group-hover:bg-accent/20 group-hover:shadow-[0_0_20px_rgba(116,40,245,0.3)] transition-all duration-500 relative z-10">
                                 {React.cloneElement(feature.icon as React.ReactElement<any>, { size: 32 })}
                             </div>
-                            <h3 className="text-2xl font-bold mb-4 text-white tracking-tight relative z-10">{feature.title}</h3>
+                            <h3 className="text-2xl font-semibold mb-4 text-white tracking-tight relative z-10">{feature.title}</h3>
                             <p className="text-zinc-400 text-base leading-relaxed font-medium group-hover:text-zinc-200 transition-colors relative z-10">{feature.description}</p>
                         </motion.div>
                     ))}

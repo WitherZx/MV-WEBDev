@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: 'Neon AI';
-  src: url('/fonts/Neon_Ai.otf') format('opentype');
+  font-family: 'Azonix';
+  src: url('/fontes/azonix/Azonix.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -19,7 +19,8 @@
 }
 
 @theme {
-  --font-neon: 'Neon AI', sans-serif;
+  --font-azonix: 'Azonix', sans-serif;
+  --font-raleway: var(--font-raleway), sans-serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);
@@ -174,24 +175,31 @@ body {
   content: '';
   position: absolute;
   top: 0;
-  left: -150%;
+  left: 0;
   width: 50%;
   height: 100%;
   background: linear-gradient(to right,
       transparent,
       rgba(255, 255, 255, 0.4),
       transparent);
-  transform: skewX(-25deg);
+  transform: translateX(-250%) skewX(-25deg);
   z-index: 10;
   pointer-events: none;
-  transition: left 0s 1.5s;
-  /* Reset without animation */
 }
 
 .glass-shine-hover:-webkit-any(:hover, :focus)::before,
 .glass-shine-hover:hover::before {
-  left: 150%;
-  transition: left 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+  animation: glass-shine-loop 1s ease-in-out infinite alternate;
+}
+
+@keyframes glass-shine-loop {
+  0% {
+    transform: translateX(-250%) skewX(-25deg);
+  }
+
+  100% {
+    transform: translateX(350%) skewX(-25deg);
+  }
 }
 
 

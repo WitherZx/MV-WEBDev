@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Space_Grotesk } from "next/font/google";
+import { Montserrat, Raleway } from "next/font/google";
 import "./globals.css";
 
-const spaceGrotesk = Space_Grotesk({ subsets: ["latin"] });
+const montserrat = Montserrat({ subsets: ["latin"] });
+const raleway = Raleway({ subsets: ["latin"], weight: ["800", "900"], variable: "--font-raleway" });
 
 export const metadata: Metadata = {
   title: "MV WEB DEV | Sites e Apps de Alta Performance",
@@ -17,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" suppressHydrationWarning className="scroll-smooth">
       <body
-        className={`${spaceGrotesk.className} antialiased`}
+        className={`${montserrat.className} ${raleway.variable} antialiased`}
         suppressHydrationWarning
       >
         {children}

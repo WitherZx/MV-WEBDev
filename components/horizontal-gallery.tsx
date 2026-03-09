@@ -110,8 +110,8 @@ export function HorizontalGallery() {
 
                 {/* Standardized Header */}
                 <div className="flex flex-col items-center text-center mb-16 md:mb-24 w-full">
-                    <span className="text-accent text-sm font-bold uppercase tracking-[0.2em] mb-4 block">Portfólio & Soluções</span>
-                    <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white tracking-tighter mb-4 md:mb-6">
+                    <span className="text-accent text-sm font-semibold uppercase tracking-[0.2em] mb-4 block">Portfólio & Soluções</span>
+                    <h2 className="text-3xl md:text-5xl lg:text-6xl font-azonix font-normal text-white mb-4 md:mb-6">
                         Excelência Comprovada
                     </h2>
                     <p className="text-sm md:text-xl text-zinc-400 font-medium max-w-2xl leading-relaxed">
@@ -139,7 +139,7 @@ export function HorizontalGallery() {
                             </div>
 
                             <div className="relative z-20 flex flex-col justify-end p-6 md:p-8 text-left w-full h-full md:translate-y-4 md:group-hover:translate-y-0 transition-transform duration-500">
-                                <h4 className="text-xl md:text-2xl font-black text-white mb-2 leading-tight tracking-tight">
+                                <h4 className="text-xl md:text-2xl font-semibold text-white mb-2 leading-tight tracking-tight">
                                     {item.title}
                                 </h4>
                                 <p className="text-sm md:text-base text-zinc-400 font-medium leading-relaxed group-hover:text-zinc-200 transition-colors">

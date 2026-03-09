@@ -5,7 +5,7 @@ import { useInView, useMotionValue, useSpring, motion } from "framer-motion";
 
 const stats = [
     { label: "Anos de experiência", value: 6, suffix: "+" },
-    { label: "Sites entregues", value: 300, suffix: "+" },
+    { label: "Projetos entregues", value: 400, suffix: "+" },
     { label: "De satisfação", value: 99, suffix: "%" },
 ];
 
@@ -43,7 +43,7 @@ function Counter({
     }, [springValue]);
 
     return (
-        <div className="flex items-baseline font-neon text-6xl md:text-7xl font-black text-white tracking-wide mx-auto w-fit tabular-nums leading-none">
+        <div className="flex items-baseline font-azonix text-6xl md:text-7xl font-normal text-white tracking-normal mx-auto w-fit tabular-nums leading-none">
             <span ref={ref}>0</span>
             <span className="text-accent">{suffix}</span>
         </div>
@@ -66,7 +66,7 @@ export function Stats() {
                         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-[1px] bg-gradient-to-r from-transparent via-accent/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                         <Counter value={stat.value} suffix={stat.suffix} />
-                        <p className="font-neon text-zinc-500 font-bold uppercase tracking-[0.2em] mt-4 text-xs md:text-sm">
+                        <p className="font-azonix text-zinc-500 font-bold uppercase tracking-[0.2em] mt-4 text-xs md:text-sm">
                             {stat.label}
                         </p>
                     </motion.div>

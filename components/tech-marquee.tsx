@@ -4,8 +4,10 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const items = [
-    "Next.js", "React", "WordPress", "Elementor", "Tailwind", "Framer Motion",
-    "Node.js", "PostgreSQL", "Supabase", "Vercel", "Performance",
+    "Next.js", "Expo", "React", "React Native", "TypeScript",
+    "Tailwind CSS", "JavaScript", "HTML", "CSS", "WordPress",
+    "Elementor", "WooCommerce", "Tray Commerce", "UX/UI", "SEO",
+    "Search Console", "Photoshop", "Illustrator", "Canva"
 ];
 
 export function TechMarquee() {
@@ -22,7 +24,7 @@ export function TechMarquee() {
                             {items.map((item) => (
                                 <span
                                     key={item}
-                                    className="text-4xl md:text-6xl font-black text-white/5 hover:text-accent transition-all duration-700 cursor-default uppercase tracking-tighter"
+                                    className="text-4xl md:text-6xl font-azonix font-normal text-white/5 hover:text-accent transition-all duration-700 cursor-default uppercase tracking-wide"
                                 >
                                     {item}
                                 </span>

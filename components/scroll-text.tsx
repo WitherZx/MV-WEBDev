@@ -13,7 +13,7 @@ export function ScrollText({ text }: { text: string }) {
     const words = text.split(" ");
 
     return (
-        <div ref={containerRef} className="py-40 flex flex-wrap justify-center gap-x-5 gap-y-2 lg:gap-8 max-w-[1400px] mx-auto px-6 text-center cursor-default">
+        <div ref={containerRef} className="py-24 md:py-32 flex flex-wrap justify-center gap-x-4 lg:gap-x-6 gap-y-0 max-w-[1200px] mx-auto px-6 text-center cursor-default">
             {words.map((word, i) => {
                 const start = i / words.length;
                 const end = (i + 1) / words.length;
@@ -24,7 +24,7 @@ export function ScrollText({ text }: { text: string }) {
                     <motion.span
                         key={i}
                         style={{ opacity }}
-                        className="text-5xl md:text-7xl lg:text-[7rem] font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-white to-zinc-600 uppercase leading-[0.9] hover:text-accent transition-colors duration-500"
+                        className="text-4xl md:text-5xl lg:text-[5.5rem] font-azonix font-normal tracking-wide text-transparent bg-clip-text bg-gradient-to-br from-white to-zinc-600 uppercase leading-[1.2] pt-4 pb-2 -mt-2 hover:text-accent transition-colors duration-500 inline-block"
                     >
                         {word}
                     </motion.span>

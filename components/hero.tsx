@@ -1,22 +1,23 @@
 import React from "react";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
 import { FloatingTech } from "./floating-tech";
 
 export function Hero() {
     return (
         <section id="home" className="relative flex min-h-[calc(100vh-80px)] w-full flex-col items-center justify-center overflow-hidden bg-black px-6 py-20 md:py-32 border-b border-white/5">
 
-            {/* Liquid Glass Background Elements */}
+            {/* Video Background Elements */}
             <div className="absolute inset-0 z-0">
-                <Image
-                    src="/imagens/liquid-glass.png"
-                    alt="Liquid Glass Background"
-                    fill
-                    priority
-                    className="object-cover opacity-20"
-                />
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="absolute inset-0 w-full h-full object-cover opacity-20"
+                >
+                    <source src="/imagens/hero.mp4" type="video/mp4" />
+                </video>
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent pointer-events-none" />
             </div>
 
@@ -30,32 +31,32 @@ export function Hero() {
                         <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75"></span>
                         <span className="relative inline-flex h-2 w-2 rounded-full bg-accent"></span>
                     </span>
-                    <span className="text-[10px] md:text-xs font-bold tracking-widest text-white/90 uppercase">
-                        Disponível para novos projetos
+                    <span className="text-[10px] md:text-xs font-semibold tracking-widest text-white/90 uppercase">
+                        Marcos V. • Desenvolvedor Freelancer
                     </span>
                 </div>
 
-                <h1 className="mb-6 mx-auto max-w-5xl text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-[1.05] tracking-tighter text-white w-full">
-                    Melhore o seu posicionamento online e conquiste <br className="hidden xl:block" />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-purple-400">novos clientes.</span>
+                <h1 className="mb-6 mx-auto max-w-5xl text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] xl:text-[5rem] font-azonix font-normal leading-tight text-white w-full tracking-normal">
+                    Soluções web que <br className="hidden xl:block" />
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-purple-400">geram resultado</span> para o seu negócio.
                 </h1>
 
                 <p className="mb-10 mx-auto max-w-3xl text-sm sm:text-lg md:text-xl xl:text-2xl font-medium leading-relaxed text-zinc-300 tracking-wide w-full px-2">
-                    Seu site é sua vitrine na internet, então é hora de elevar o nível e mostrar a que veio com um site exclusivo, rápido, bem ranqueado e de alta conversão!
+                    Especialista em React, Next.js, WordPress e E-commerce. Meu objetivo não é apenas desenvolver, mas criar estruturas que aumentam vendas e geram clientes.
                 </p>
 
                 <div className="flex w-full max-w-4xl flex-col items-center justify-center gap-4 sm:flex-row mx-auto">
                     <Link
                         href="https://api.whatsapp.com/send?phone=554198364028"
                         target="_blank"
-                        className="magic-button flex w-full sm:w-auto items-center justify-center gap-2 md:gap-3 px-6 py-4 md:px-10 md:py-5 text-sm md:text-lg font-black tracking-wide"
+                        className="magic-button flex w-full sm:w-auto items-center justify-center gap-2 md:gap-3 px-6 py-4 md:px-10 md:py-5 text-sm md:text-lg font-semibold tracking-wide"
                     >
                         Quero aumentar minhas vendas
                         <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
                     </Link>
                     <Link
                         href="#portfolio"
-                        className="flex w-full sm:w-auto items-center justify-center rounded-full border border-white/10 bg-black/40 backdrop-blur-xl px-6 py-4 md:px-10 md:py-5 text-sm md:text-lg font-bold text-white transition-all duration-500 hover:bg-white/15 hover:border-white/30 hover:shadow-[0_0_30px_rgba(255,255,255,0.1)] hover:-translate-y-1 active:scale-95 liquid-glass glass-shine-hover"
+                        className="flex w-full sm:w-auto items-center justify-center rounded-full border border-white/10 bg-black/40 backdrop-blur-xl px-6 py-4 md:px-10 md:py-5 text-sm md:text-lg font-semibold text-white transition-all duration-500 hover:bg-white/15 hover:border-white/30 hover:shadow-[0_0_30px_rgba(255,255,255,0.1)] hover:-translate-y-1 active:scale-95 liquid-glass glass-shine-hover"
                     >
                         Confira meu portfólio
                     </Link>

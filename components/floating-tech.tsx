@@ -28,6 +28,36 @@ const ICONS = [
         name: "Figma",
         url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg",
         top: '40%', left: '92%', size: 35, delay: 1.1, duration: 8.5
+    },
+    {
+        name: "TypeScript",
+        url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+        top: '12%', left: '55%', size: 45, delay: 0.5, duration: 6.5
+    },
+    {
+        name: "Tailwind CSS",
+        url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+        top: '85%', left: '30%', size: 55, delay: 1.2, duration: 7.5
+    },
+    {
+        name: "Node.js",
+        url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
+        top: '50%', left: '5%', size: 45, delay: 2.5, duration: 8
+    },
+    {
+        name: "Git",
+        url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
+        top: '85%', left: '65%', size: 45, delay: 1.8, duration: 6.8
+    },
+    {
+        name: "HTML5",
+        url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
+        top: '30%', left: '35%', size: 40, delay: 0.3, duration: 7.2
+    },
+    {
+        name: "CSS3",
+        url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
+        top: '50%', left: '75%', size: 40, delay: 0.8, duration: 6.2
     }
 ];
 
