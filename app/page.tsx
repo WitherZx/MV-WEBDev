@@ -64,7 +64,7 @@ export default function Home() {
           </section>
 
           {/* Footer Base */}
-          <footer className="relative py-16 md:py-24 bg-black border-t border-white/5 w-full overflow-hidden">
+          <footer className="relative pt-16 pb-8 md:pt-24 md:pb-8 bg-black border-t border-white/5 w-full overflow-hidden">
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(116,40,245,0.15),transparent_50%)] pointer-events-none" />
 
             <div className="container mx-auto px-6 max-w-7xl flex flex-col items-center gap-12 w-full text-center relative z-10">
@@ -72,7 +72,7 @@ export default function Home() {
               {/* Logo & Slogan */}
               <div className="flex flex-col items-center gap-4 cursor-default">
                 <span className="text-4xl md:text-6xl font-raleway font-black tracking-tighter text-white hover:scale-105 transition-transform duration-500">
-                  MV WEB <span className="text-accent underline underline-offset-8 decoration-white/20">DEV</span>
+                  MV WEB <span className="text-accent underline underline-offset-8 decoration-accent">DEV</span>
                 </span>
                 <p className="text-zinc-400 font-semibold text-xs md:text-sm tracking-[0.3em] uppercase mt-2">
                   Curitiba, Brasil • Para o Mundo
@@ -104,7 +104,7 @@ export default function Home() {
               </div>
 
               {/* Divider & Copyright */}
-              <div className="w-full flex flex-col items-center gap-6 mt-4 md:mt-8">
+              <div className="w-full flex flex-col items-center gap-8 mt-4 md:mt-8">
                 <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent" />
                 <div className="text-zinc-600 font-medium text-xs md:text-sm tracking-wide">
                   © {new Date().getFullYear()} Marcos V. Web Dev. Todos os direitos reservados.

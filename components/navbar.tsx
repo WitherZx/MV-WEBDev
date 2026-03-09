@@ -50,7 +50,7 @@ export function Navbar() {
             >
                 <div className="container mx-auto max-w-7xl px-6 flex items-center justify-between">
                     <Link href="/" className="text-2xl font-raleway font-black tracking-tighter text-white">
-                        MV WEB <span className="text-accent underline decoration-accent/30 underline-offset-4">DEV</span>
+                        MV WEB <span className="text-accent underline decoration-accent underline-offset-4">DEV</span>
                     </Link>
 
                     {/* Desktop Nav */}
@@ -101,7 +101,7 @@ export function Navbar() {
             >
                 <div className="flex items-center justify-between mb-12">
                     <Link href="/" className="text-xl font-raleway font-black tracking-tighter text-white" onClick={() => setMobileMenuOpen(false)}>
-                        MV WEB <span className="text-accent underline decoration-accent/30 underline-offset-4">DEV</span>
+                        MV WEB <span className="text-accent underline decoration-accent underline-offset-4">DEV</span>
                     </Link>
                     <button
                         className="p-2 text-zinc-400 hover:text-white transition-colors"
