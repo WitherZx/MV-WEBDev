@@ -53,7 +53,7 @@ export default function Home() {
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent opacity-50" />
 
                 <h2 className="text-3xl md:text-6xl lg:text-7xl font-azonix font-normal text-white mb-4 md:mb-6 relative z-10 tracking-normal">
-                  Sua Estratégia <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-purple-400">Digital de Elite</span>
+                  Sua Estratégia <span className="block text-transparent bg-clip-text bg-gradient-to-r from-accent to-purple-400">Digital de Elite</span>
                 </h2>
                 <p className="text-sm md:text-2xl text-zinc-400 font-medium leading-relaxed max-w-3xl mx-auto mb-8 md:mb-12 relative z-10">
                   Pronto para transformar sua presença online em uma máquina de resultados? Vamos discutir suas necessidades e encontrar a melhor solução.
