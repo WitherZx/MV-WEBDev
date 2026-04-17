@@ -1,4 +1,4 @@
-import { Instagram, Github, Mail, BrainCircuit, ArrowLeft, Briefcase, Bot, Smartphone, Globe, Sparkles } from "lucide-react";
+import { Instagram, Github, Linkedin, Mail, Phone, BrainCircuit, ArrowLeft, Briefcase, Bot, Smartphone, Globe, Sparkles } from "lucide-react";
 import { PrintButton } from "@/components/print-button";
 import Image from "next/image";
 import Link from "next/link";
@@ -16,25 +16,45 @@ export default function CurriculoPage() {
                 @media print {
                     @page {
                         margin: 0;
-                        size: auto;
+                        size: A4;
                     }
-                    body {
+                    html, body {
                         background-color: #000 !important;
+                        margin: 0 !important;
+                        padding: 0 !important;
                         -webkit-print-color-adjust: exact !important;
                         print-color-adjust: exact !important;
                     }
+                    body {
+                        overflow: visible !important;
+                    }
                     main {
-                        padding-top: 40px !important;
-                        padding-bottom: 40px !important;
+                        padding: 10mm !important;
                         background-color: #000 !important;
+                        overflow: visible !important;
+                        height: auto !important;
+                        min-height: 0 !important;
                     }
                     .no-print {
                         display: none !important;
                     }
+                    .print-break-before {
+                        break-before: page !important;
+                    }
+                    h1, h2, h3 {
+                        break-after: avoid !important;
+                        page-break-after: avoid !important;
+                    }
                     .print-section {
-                        break-inside: avoid;
-                        page-break-inside: avoid;
-                        margin-bottom: 30px !important;
+                        break-inside: auto !important;
+                        page-break-inside: auto !important;
+                    }
+                    .print-card {
+                        break-inside: avoid !important;
+                        page-break-inside: avoid !important;
+                        margin-bottom: 20px !important;
+                        position: relative;
+                        display: block;
                     }
                     .print-text-zinc {
                         color: #a1a1aa !important; /* zinc-400 */
@@ -61,7 +81,7 @@ export default function CurriculoPage() {
                     }
                 }
             `}} />
-            <main className="relative bg-black text-white min-h-screen w-full pb-20 overflow-clip selection:bg-accent/40 selection:text-white font-sans">
+            <main className="relative bg-black text-white min-h-screen w-full pb-20 print:pb-10 overflow-visible selection:bg-accent/40 selection:text-white font-sans">
 
                 {/* Fixed Top Bar - No Print */}
                 <nav className="sticky top-0 z-50 w-full bg-black/80 backdrop-blur-md border-b border-white/5 no-print">
@@ -82,75 +102,128 @@ export default function CurriculoPage() {
 
                 <div className="container mx-auto max-w-4xl px-6 relative z-10">
 
-                    {/* Reorganized Header: Centered & Balanced */}
-                    <div className="flex flex-col items-center text-center mb-16 pt-20">
-                        <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white/10 shadow-[0_0_50px_rgba(116,40,245,0.4)] mb-8 transform hover:scale-105 transition-transform duration-500">
-                            <Image
-                                src="/imagens/image.png"
-                                alt="Marcos Vinicius"
-                                fill
-                                className="object-cover"
-                                priority
-                            />
+                    {/* Re-Remodeled Header: Identity Left, Card Right */}
+                    <div className="grid grid-cols-1 md:grid-cols-5 print:grid-cols-5 gap-10 items-center mb-16 pt-20 print:pt-0 print:mb-6">
+
+                        {/* Left Side: Visual Identity (3/5 columns) */}
+                        <div className="md:col-span-3 print:col-span-3 flex flex-col items-center md:items-start print:items-start text-center md:text-left print:text-left gap-6">
+                            <div className="relative w-25 h-25 rounded-[15px] overflow-hidden border-4 border-white/10 transform hover:scale-105 transition-transform duration-500 print:w-28 print:h-28">
+                                <Image
+                                    src="/imagens/image.png"
+                                    alt="Marcos Vinicius"
+                                    fill
+                                    className="object-cover"
+                                    priority
+                                />
+                            </div>
+
+                            <div className="space-y-2">
+                                <h1 className="text-4xl md:text-5xl font-azonix font-normal text-white tracking-tighter print:text-4xl">
+                                    Marcos Vinicius
+                                </h1>
+                                <p className="text-lg md:text-1xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-accent to-purple-400 uppercase tracking-widest print-gradient-text print:text-lg">
+                                    Software Engineer & AI Specialist
+                                </p>
+                            </div>
+
+                            <div className="flex flex-wrap items-center justify-center md:justify-start print:justify-start gap-x-6 gap-y-3 text-zinc-400 font-medium text-xs md:text-sm print:text-[10px]">
+                                <span className="flex items-center gap-2">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+                                    📍 Curitiba/Piên, PR
+                                </span>
+                                <span className="flex items-center gap-2">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+                                    🚀 +400 Projetos Entregues
+                                </span>
+                                <span className="flex items-center gap-2">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+                                    ⚙️ 7 Anos de Experiência
+                                </span>
+                                <span className="flex items-center gap-2">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+                                    🎓 Software Engineering (JALA)
+                                </span>
+                            </div>
                         </div>
 
-                        <h1 className="text-4xl md:text-6xl font-azonix font-normal text-white mb-4 tracking-tighter">
-                            Marcos Vinicius
-                        </h1>
-                        <p className="text-xl md:text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-accent to-purple-400 mb-6 uppercase tracking-wider print-gradient-text">
-                            Software Engineer & AI Specialist
-                        </p>
+                        {/* Right Side: Professional Data Card (2/5 columns) */}
+                        <div className="md:col-span-2 print:col-span-2 relative group mb-0 no-print">
+                            <div className="absolute -inset-0.5 bg-gradient-to-r from-accent to-purple-500 rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+                            <div className="relative bg-zinc-950/80 backdrop-blur-xl border border-white/10 p-6 rounded-3xl flex flex-col gap-6 shadow-2xl">
+                                <div className="space-y-4">
+                                    <div className="flex flex-col gap-1">
+                                        <span className="text-[9px] uppercase tracking-[0.2em] text-accent font-bold">Identificação Profissional</span>
+                                        <h3 className="text-md font-bold text-white leading-none">Marcos Vinicius da Rosa Gomes</h3>
+                                    </div>
 
-                        <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-zinc-400 font-medium mb-10 text-sm md:text-base">
-                            <span className="flex items-center gap-2">
-                                <span className="w-2 h-2 rounded-full bg-accent" />
-                                📍 Curitiba/Piên, PR
-                            </span>
-                            <span className="flex items-center gap-2">
-                                <span className="w-2 h-2 rounded-full bg-accent" />
-                                🚀 +400 Projetos Entregues
-                            </span>
-                            <span className="flex items-center gap-2">
-                                <span className="w-2 h-2 rounded-full bg-accent" />
-                                ⚙️ 7 Anos de Experiência
-                            </span>
-                            <span className="flex items-center gap-2">
-                                <span className="w-2 h-2 rounded-full bg-accent" />
-                                🎓 Software Engineering (JALA)
-                            </span>
+                                    <div className="flex flex-col gap-3">
+                                        <a href="mailto:marcos.contatoprof@gmail.com" className="flex items-center gap-3 text-zinc-400 hover:text-white transition-colors group/link">
+                                            <div className="w-8 h-8 rounded-xl bg-white/5 flex items-center justify-center group-hover/link:bg-accent/20 group-hover/link:text-accent transition-all">
+                                                <Mail size={16} />
+                                            </div>
+                                            <span className="text-xs font-medium">marcos.contatoprof@gmail.com</span>
+                                        </a>
+                                        <a href="tel:+554198364028" className="flex items-center gap-3 text-zinc-400 hover:text-white transition-colors group/link">
+                                            <div className="w-8 h-8 rounded-xl bg-white/5 flex items-center justify-center group-hover/link:bg-accent/20 group-hover/link:text-accent transition-all">
+                                                <Phone size={16} />
+                                            </div>
+                                            <span className="text-xs font-medium">+55 (41) 9836-4028</span>
+                                        </a>
+                                        <div className="flex items-center gap-3 text-zinc-400">
+                                            <div className="w-8 h-8 rounded-xl bg-white/5 flex items-center justify-center">
+                                                <Globe size={16} />
+                                            </div>
+                                            <span className="text-xs font-medium">mvwebdev.com.br</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="h-[1px] w-full bg-white/5"></div>
+
+                                <div className="flex items-center justify-between gap-4">
+                                    <div className="flex items-center gap-2">
+                                        <a href="https://github.com/WitherZx" target="_blank" className="w-9 h-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-accent hover:border-accent hover:text-white transition-all duration-300 shadow-lg">
+                                            <Github size={18} />
+                                        </a>
+                                        <a href="https://https://www.linkedin.com/in/marcos-gomes-bb152520b/" target="_blank" className="w-9 h-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-accent hover:border-accent hover:text-white transition-all duration-300 shadow-lg">
+                                            <Linkedin size={18} />
+                                        </a>
+                                        <a href="https://instagram.com/_devmarcos" target="_blank" className="w-9 h-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-accent hover:border-accent hover:text-white transition-all duration-300 shadow-lg">
+                                            <Instagram size={18} />
+                                        </a>
+                                    </div>
+                                    <div className="no-print">
+                                        <PrintButton />
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
-                        <div className="flex items-center justify-center gap-4 no-print">
-                            <a href="mailto:marcos.contatoprof@gmail.com" title="Email" className="p-4 bg-white/5 border border-white/10 rounded-2xl hover:bg-accent hover:border-accent hover:shadow-[0_0_20px_rgba(116,40,245,0.4)] transition-all duration-300">
-                                <Mail size={22} />
-                            </a>
-                            <a href="https://github.com/WitherZx" target="_blank" title="GitHub" className="p-4 bg-white/5 border border-white/10 rounded-2xl hover:bg-accent hover:border-accent hover:shadow-[0_0_20px_rgba(116,40,245,0.4)] transition-all duration-300">
-                                <Github size={22} />
-                            </a>
-                            <a href="https://instagram.com/_devmarcos" target="_blank" title="Instagram" className="p-4 bg-white/5 border border-white/10 rounded-2xl hover:bg-accent hover:border-accent hover:shadow-[0_0_20px_rgba(116,40,245,0.4)] transition-all duration-300">
-                                <Instagram size={22} />
-                            </a>
-                            <div className="w-[1px] h-10 bg-white/10 mx-2" />
-                            <PrintButton />
-                        </div>
-
-                        {/* Only visible in Print */}
-                        <div className="hidden print:flex flex-col items-center gap-2 text-zinc-400 text-sm font-medium">
-                            <p>Email: marcos.contatoprof@gmail.com</p>
-                            <p>WhatsApp: +55 41 9836-4028</p>
-                            <p>Website: mvwebdev.com.br</p>
+                        {/* Print Only Card: Simplified version for PDF (Right column) */}
+                        <div className="hidden print:block print:col-span-2 bg-zinc-900/30 border border-white/5 p-6 rounded-3xl print-card">
+                            <div className="flex flex-col gap-1 border-b border-white/10 pb-4 mb-4">
+                                <span className="text-[8px] uppercase tracking-widest text-accent font-bold">Identificação</span>
+                                <h3 className="text-base font-bold text-white leading-tight">Marcos Vinicius da Rosa Gomes</h3>
+                            </div>
+                            <div className="space-y-2 text-zinc-400 text-[9px] font-medium">
+                                <p className="flex items-center gap-2"><Mail size={12} className="text-accent" /> marcos.contatoprof@gmail.com</p>
+                                <p className="flex items-center gap-2"><Phone size={12} className="text-accent" /> +55 41 9836-4028</p>
+                                <p className="flex items-center gap-2"><Globe size={12} className="text-accent" /> mvwebdev.com.br</p>
+                                <p className="flex items-center gap-2"><Github size={12} className="text-accent" /> github.com/WitherZx</p>
+                                <p className="flex items-center gap-1.5"><Linkedin size={12} className="text-accent" /> https://www.linkedin.com/in/marcos-gomes-bb152520b/</p>
+                            </div>
                         </div>
                     </div>
 
                     <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent mb-20 no-print" />
 
                     {/* Resumo Profissional */}
-                    <section className="mb-12 print-section">
+                    <section className="mb-12 print:mb-4">
                         <h2 className="text-2xl font-bold flex items-center gap-3 mb-6 text-white">
                             <span className="w-8 h-1 bg-accent rounded-full block no-print" />
                             Perfil Profissional
                         </h2>
-                        <div className="bg-zinc-950/50 border border-white/5 p-6 md:p-8 rounded-2xl md:rounded-[2rem] text-zinc-300 leading-relaxed font-medium print-bg-zinc print-border print-text-zinc">
+                        <div className="bg-zinc-950/50 border border-white/5 p-6 md:p-8 rounded-2xl md:rounded-[2rem] text-zinc-300 leading-relaxed font-medium print-bg-zinc print-border print-text-zinc print-card">
                             <p className="mb-6">
                                 Desenvolvedor desde os 16 anos, atuo como <strong className="text-white">Engenheiro de Software</strong> com foco na criação de ecossistemas complexos e aplicativos baseados em <strong className="text-white">Inteligência Artificial</strong>. Possuo forte veia empreendedora e foco em métricas de negócio.
                             </p>
@@ -172,14 +245,14 @@ export default function CurriculoPage() {
                     </section>
 
                     {/* Projetos em Destaque */}
-                    <section className="mb-12 print-section">
+                    <section className="mb-12 print:mb-4">
                         <h2 className="text-2xl font-bold flex items-center gap-3 mb-8 text-white">
                             <span className="w-8 h-1 bg-accent rounded-full block no-print" />
                             Projetos em Destaque / Produtos Proprietários
                         </h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 print:grid-cols-2 print:gap-4">
                             {/* RepTrail */}
-                            <div className="group relative bg-zinc-950/50 border border-white/5 p-6 rounded-3xl hover:border-accent/50 transition-all duration-500 overflow-hidden">
+                            <div className="group relative bg-zinc-950/50 border border-white/5 p-6 rounded-3xl hover:border-accent/50 transition-all duration-500 overflow-hidden print-card print:p-5">
                                 <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-30 transition-opacity">
                                     <Smartphone size={100} className="text-accent" />
                                 </div>
@@ -193,7 +266,7 @@ export default function CurriculoPage() {
                                     <p className="text-zinc-400 text-sm leading-relaxed mb-6 font-medium">
                                         Ecossistema Fitness completo (Alunos e Personais). Utiliza <strong className="text-white">IA (OpenRouters)</strong> para geração automatizada de treinos e dietas personalizadas. Integração com sistema de afiliados.
                                     </p>
-                                    <div className="flex flex-wrap gap-2 text-[10px] font-bold uppercase tracking-widest text-accent mb-6">
+                                    <div className="flex flex-wrap gap-2 text-[10px] font-bold uppercase tracking-widest text-accent mb-6 print:mb-1 print:gap-1.5">
                                         <span className="px-2 py-1 rounded-md bg-accent/10 border border-accent/20">Next.js</span>
                                         <span className="px-2 py-1 rounded-md bg-accent/10 border border-accent/20">React</span>
                                         <span className="px-2 py-1 rounded-md bg-accent/10 border border-accent/20">TypeScript</span>
@@ -201,9 +274,9 @@ export default function CurriculoPage() {
                                         <span className="px-2 py-1 rounded-md bg-accent/10 border border-accent/20">Supabase</span>
                                         <span className="px-2 py-1 rounded-md bg-accent/10 border border-accent/20">OpenRouter</span>
                                     </div>
-                                    <a 
-                                        href="https://reptrail.com.br" 
-                                        target="_blank" 
+                                    <a
+                                        href="https://reptrail.com.br"
+                                        target="_blank"
                                         className="no-print inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-[10px] font-bold uppercase tracking-wider text-zinc-400 hover:text-accent hover:border-accent/50 hover:bg-accent/5 transition-all duration-300 group/btn"
                                     >
                                         Acessar Projeto
@@ -213,7 +286,7 @@ export default function CurriculoPage() {
                             </div>
 
                             {/* iaNow */}
-                            <div className="group relative bg-zinc-950/50 border border-white/5 p-6 rounded-3xl hover:border-accent/50 transition-all duration-500 overflow-hidden">
+                            <div className="group relative bg-zinc-950/50 border border-white/5 p-6 rounded-3xl hover:border-accent/50 transition-all duration-500 overflow-hidden print-card print:p-5">
                                 <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-30 transition-opacity">
                                     <Bot size={100} className="text-accent" />
                                 </div>
@@ -227,7 +300,7 @@ export default function CurriculoPage() {
                                     <p className="text-zinc-400 text-sm leading-relaxed mb-6 font-medium">
                                         Aplicativo jurídico alimentado pela <strong className="text-white">&quot;Minerva&quot;</strong> (IA proprietária baseada em Gemini Flash 2.1) para geração de contratos, minutas e estratégias processuais.
                                     </p>
-                                    <div className="flex flex-wrap gap-2 text-[10px] font-bold uppercase tracking-widest text-accent mb-6">
+                                    <div className="flex flex-wrap gap-2 text-[10px] font-bold uppercase tracking-widest text-accent mb-6 print:mb-1 print:gap-1.5">
                                         <span className="px-2 py-1 rounded-md bg-accent/10 border border-accent/20">Next.js</span>
                                         <span className="px-2 py-1 rounded-md bg-accent/10 border border-accent/20">React</span>
                                         <span className="px-2 py-1 rounded-md bg-accent/10 border border-accent/20">TypeScript</span>
@@ -235,9 +308,9 @@ export default function CurriculoPage() {
                                         <span className="px-2 py-1 rounded-md bg-accent/10 border border-accent/20">Supabase</span>
                                         <span className="px-2 py-1 rounded-md bg-accent/10 border border-accent/20">OpenRouter</span>
                                     </div>
-                                    <a 
-                                        href="https://ianow.ia.br" 
-                                        target="_blank" 
+                                    <a
+                                        href="https://ianow.ia.br"
+                                        target="_blank"
                                         className="no-print inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-[10px] font-bold uppercase tracking-wider text-zinc-400 hover:text-accent hover:border-accent/50 hover:bg-accent/5 transition-all duration-300 group/btn"
                                     >
                                         Acessar Projeto
@@ -249,7 +322,7 @@ export default function CurriculoPage() {
                     </section>
 
                     {/* Educação */}
-                    <section className="mb-12 print-section">
+                    <section className="mb-12 print-break-before">
                         <h2 className="text-2xl font-bold flex items-center gap-3 mb-6 text-white">
                             <span className="w-8 h-1 bg-accent rounded-full block no-print" />
                             Formação Acadêmica
@@ -257,7 +330,7 @@ export default function CurriculoPage() {
                         <div className="relative pl-8 md:pl-0">
                             <div className="hidden md:block absolute left-[15px] top-2 bottom-0 w-[2px] bg-white/10" />
 
-                            <div className="relative md:pl-12 mb-8 group">
+                            <div className="relative md:pl-12 mb-8 group print-card border-none bg-transparent">
                                 <div className="hidden md:flex absolute left-0 top-1 w-8 h-8 rounded-full bg-black border-2 border-accent text-accent items-center justify-center font-bold text-xs z-10 shadow-[0_0_10px_rgba(116,40,245,0.5)]">
                                     🎓
                                 </div>
@@ -271,7 +344,7 @@ export default function CurriculoPage() {
                     </section>
 
                     {/* Experiência */}
-                    <section className="mb-12 print-section">
+                    <section className="mb-12">
                         <h2 className="text-2xl font-bold flex items-center gap-3 mb-6 text-white">
                             <span className="w-8 h-1 bg-accent rounded-full block no-print" />
                             Experiência Profissional
@@ -279,7 +352,7 @@ export default function CurriculoPage() {
                         <div className="relative pl-8 md:pl-0">
                             <div className="hidden md:block absolute left-[15px] top-2 bottom-0 w-[2px] bg-white/10" />
 
-                            <div className="relative md:pl-12 mb-10 group">
+                            <div className="relative md:pl-12 mb-10 group print-card border-none bg-transparent">
                                 <div className="hidden md:flex absolute left-0 top-1 w-8 h-8 rounded-full bg-black border-2 border-accent text-accent items-center justify-center font-bold text-xs z-10 shadow-[0_0_10px_rgba(116,40,245,0.5)]">
                                     HO
                                 </div>
@@ -294,7 +367,7 @@ export default function CurriculoPage() {
                                 </ul>
                             </div>
 
-                            <div className="relative md:pl-12 mb-10 group">
+                            <div className="relative md:pl-12 mb-10 group print-card border-none bg-transparent">
                                 <div className="hidden md:flex absolute left-0 top-1 w-8 h-8 rounded-full bg-black border-2 border-accent text-accent items-center justify-center font-bold text-xs z-10 shadow-[0_0_10px_rgba(116,40,245,0.5)]">
                                     FL
                                 </div>
@@ -309,7 +382,7 @@ export default function CurriculoPage() {
                                 </ul>
                             </div>
 
-                            <div className="relative md:pl-12 mb-10 group">
+                            <div className="relative md:pl-12 mb-10 group print-card border-none bg-transparent">
                                 <div className="hidden md:flex absolute left-0 top-1 w-8 h-8 rounded-full bg-black border-2 border-accent text-accent items-center justify-center font-bold text-xs z-10 shadow-[0_0_10px_rgba(116,40,245,0.5)]">
                                     V4
                                 </div>
@@ -324,7 +397,7 @@ export default function CurriculoPage() {
                                 </ul>
                             </div>
 
-                            <div className="relative md:pl-12 mb-8 group">
+                            <div className="relative md:pl-12 mb-8 group print-card border-none bg-transparent">
                                 <div className="hidden md:flex absolute left-0 top-1 w-8 h-8 rounded-full bg-black border-2 border-accent text-accent items-center justify-center font-bold text-xs z-10 shadow-[0_0_10px_rgba(116,40,245,0.5)]">
                                     MV
                                 </div>
@@ -342,22 +415,22 @@ export default function CurriculoPage() {
                     </section>
 
                     {/* Habilidades & Stack */}
-                    <section className="mb-12 print-section">
+                    <section className="mb-12 print-break-before">
                         <h2 className="text-2xl font-bold flex items-center gap-3 mb-8 text-white">
                             <span className="w-8 h-1 bg-accent rounded-full block no-print" />
                             Hard Skills & Tecnologias
                         </h2>
-                        
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 print:grid-cols-2 print:gap-4">
                             {/* Frontend & Mobile */}
-                            <div className="bg-zinc-950/40 border border-white/5 p-8 rounded-[2rem] hover:border-accent/20 transition-all duration-500 group relative overflow-hidden">
+                            <div className="bg-zinc-950/40 border border-white/5 p-8 rounded-[2rem] hover:border-accent/20 transition-all duration-500 group relative overflow-hidden print-card print:p-5">
                                 <div className="absolute -top-24 -right-24 w-48 h-48 bg-accent/5 blur-[80px] rounded-full pointer-events-none group-hover:bg-accent/10 transition-all" />
-                                
+
                                 <h4 className="text-lg font-azonix font-normal text-white mb-8 flex items-center gap-3">
                                     <Smartphone size={20} className="text-accent" />
                                     Frontend & Mobile
                                 </h4>
-                                
+
                                 <div className="grid grid-cols-4 sm:grid-cols-5 gap-y-8 gap-x-4">
                                     {[
                                         { name: 'React', icon: 'react-original' },
@@ -372,27 +445,27 @@ export default function CurriculoPage() {
                                         <div key={tech.name} className="flex flex-col items-center gap-2 group/icon pointer-events-auto" title={tech.name}>
                                             <div className="w-12 h-12 bg-white/5 rounded-xl p-2.5 border border-white/10 group-hover/icon:border-accent/50 group-hover/icon:bg-accent/5 transition-all duration-300 flex items-center justify-center relative z-10">
                                                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                                                <img 
-                                                    src={tech.url || `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${tech.icon.split('-')[0]}/${tech.icon}.svg`} 
-                                                    alt={tech.name} 
+                                                <img
+                                                    src={tech.url || `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${tech.icon.split('-')[0]}/${tech.icon}.svg`}
+                                                    alt={tech.name}
                                                     className="w-full h-full object-contain grayscale group-hover/icon:grayscale-0 transition-all duration-500"
                                                 />
                                             </div>
-                                            <span className="text-[9px] text-zinc-500 font-bold uppercase tracking-tighter opacity-0 group-hover/icon:opacity-100 transition-opacity whitespace-nowrap">{tech.name}</span>
+                                            <span className="text-[9px] text-zinc-500 font-bold uppercase tracking-tighter opacity-0 group-hover/icon:opacity-100 transition-opacity whitespace-nowrap print:opacity-100 print:text-zinc-400">{tech.name}</span>
                                         </div>
                                     ))}
                                 </div>
                             </div>
 
                             {/* Backend & Infra */}
-                            <div className="bg-zinc-950/40 border border-white/5 p-8 rounded-[2rem] hover:border-accent/20 transition-all duration-500 group relative overflow-hidden">
+                            <div className="bg-zinc-950/40 border border-white/5 p-8 rounded-[2rem] hover:border-accent/20 transition-all duration-500 group relative overflow-hidden print-card print:p-5">
                                 <div className="absolute -top-24 -right-24 w-48 h-48 bg-purple-500/5 blur-[80px] rounded-full pointer-events-none group-hover:bg-purple-500/10 transition-all" />
-                                
+
                                 <h4 className="text-lg font-azonix font-normal text-white mb-8 flex items-center gap-3">
                                     <Globe size={20} className="text-accent" />
                                     Backend & Infra
                                 </h4>
-                                
+
                                 <div className="grid grid-cols-4 sm:grid-cols-5 gap-y-8 gap-x-4">
                                     {[
                                         { name: 'TS', icon: 'typescript-original' },
@@ -406,27 +479,27 @@ export default function CurriculoPage() {
                                         <div key={tech.name} className="flex flex-col items-center gap-2 group/icon" title={tech.name}>
                                             <div className="w-12 h-12 bg-white/5 rounded-xl p-3 border border-white/10 group-hover/icon:border-accent/50 group-hover/icon:bg-accent/5 transition-all duration-300 flex items-center justify-center">
                                                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                                                <img 
-                                                    src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${tech.icon.split('-')[0]}/${tech.icon}.svg`} 
-                                                    alt={tech.name} 
+                                                <img
+                                                    src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${tech.icon.split('-')[0]}/${tech.icon}.svg`}
+                                                    alt={tech.name}
                                                     className={`w-full h-full object-contain grayscale group-hover/icon:grayscale-0 transition-all duration-500 ${tech.name === 'Vercel' ? 'p-0.5' : ''}`}
                                                 />
                                             </div>
-                                            <span className="text-[9px] text-zinc-500 font-bold uppercase tracking-tighter opacity-0 group-hover/icon:opacity-100 transition-opacity whitespace-nowrap">{tech.name}</span>
+                                            <span className="text-[9px] text-zinc-500 font-bold uppercase tracking-tighter opacity-0 group-hover/icon:opacity-100 transition-opacity whitespace-nowrap print:opacity-100 print:text-zinc-400">{tech.name}</span>
                                         </div>
                                     ))}
                                 </div>
                             </div>
 
                             {/* Inteligência Artificial */}
-                            <div className="bg-zinc-950/40 border border-white/5 p-8 rounded-[2rem] hover:border-accent/20 transition-all duration-500 group relative overflow-hidden">
+                            <div className="bg-zinc-950/40 border border-white/5 p-8 rounded-[2rem] hover:border-accent/20 transition-all duration-500 group relative overflow-hidden print-card print:p-5">
                                 <div className="absolute -top-24 -right-24 w-48 h-48 bg-blue-500/5 blur-[80px] rounded-full pointer-events-none group-hover:bg-blue-500/10 transition-all" />
-                                
+
                                 <h4 className="text-lg font-azonix font-normal text-white mb-8 flex items-center gap-3">
                                     <BrainCircuit size={20} className="text-accent" />
                                     IA Specialist
                                 </h4>
-                                
+
                                 <div className="grid grid-cols-4 sm:grid-cols-5 gap-y-8 gap-x-4">
                                     {[
                                         { name: 'OpenAI', icon: <Bot size={24} />, color: '#10a37f' },
@@ -440,21 +513,21 @@ export default function CurriculoPage() {
                                                     {tech.icon}
                                                 </div>
                                             </div>
-                                            <span className="text-[9px] text-zinc-500 font-bold uppercase tracking-tighter opacity-0 group-hover/icon:opacity-100 transition-opacity whitespace-nowrap">{tech.name}</span>
+                                            <span className="text-[9px] text-zinc-500 font-bold uppercase tracking-tighter opacity-0 group-hover/icon:opacity-100 transition-opacity whitespace-nowrap print:opacity-100 print:text-zinc-400">{tech.name}</span>
                                         </div>
                                     ))}
                                 </div>
                             </div>
 
                             {/* CMS & Pagamentos - REDESIGNED */}
-                            <div className="bg-zinc-950/40 border border-white/5 p-8 rounded-[2rem] hover:border-accent/20 transition-all duration-500 group relative overflow-hidden md:col-span-1">
+                            <div className="bg-zinc-950/40 border border-white/5 p-8 rounded-[2rem] hover:border-accent/20 transition-all duration-500 group relative overflow-hidden md:col-span-1 print-card print:p-5">
                                 <div className="absolute -top-24 -right-24 w-48 h-48 bg-emerald-500/5 blur-[80px] rounded-full pointer-events-none group-hover:bg-emerald-500/10 transition-all" />
-                                
+
                                 <h4 className="text-lg font-azonix font-normal text-white mb-8 flex items-center gap-3">
                                     <Briefcase size={20} className="text-accent" />
                                     CMS & Pagamentos
                                 </h4>
-                                
+
                                 <div className="grid grid-cols-4 sm:grid-cols-5 gap-y-8 gap-x-4">
                                     {/* WP Core */}
                                     {([
@@ -466,13 +539,13 @@ export default function CurriculoPage() {
                                         <div key={tech.name} className="flex flex-col items-center gap-2 group/icon" title={tech.name}>
                                             <div className="w-12 h-12 bg-white/5 rounded-xl p-2.5 border border-white/10 group-hover/icon:border-accent/50 group-hover/icon:bg-accent/5 transition-all duration-300 flex items-center justify-center overflow-hidden">
                                                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                                                <img 
-                                                    src={tech.url || `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${tech.icon?.split('-')[0]}/${tech.icon}.svg`} 
-                                                    alt={tech.name} 
+                                                <img
+                                                    src={tech.url || `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${tech.icon?.split('-')[0]}/${tech.icon}.svg`}
+                                                    alt={tech.name}
                                                     className="w-full h-full object-contain grayscale group-hover/icon:grayscale-0 transition-all duration-500"
                                                 />
                                             </div>
-                                            <span className="text-[9px] text-zinc-500 font-bold uppercase tracking-tighter opacity-0 group-hover/icon:opacity-100 transition-opacity whitespace-nowrap">{tech.name}</span>
+                                            <span className="text-[9px] text-zinc-500 font-bold uppercase tracking-tighter opacity-0 group-hover/icon:opacity-100 transition-opacity whitespace-nowrap print:opacity-100 print:text-zinc-400">{tech.name}</span>
                                         </div>
                                     ))}
 
@@ -484,7 +557,7 @@ export default function CurriculoPage() {
                                                     {tool}
                                                 </span>
                                             </div>
-                                            <span className="text-[9px] text-zinc-500 font-bold uppercase tracking-tighter opacity-0 group-hover/icon:opacity-100 transition-opacity whitespace-nowrap">{tool}</span>
+                                            <span className="text-[9px] text-zinc-500 font-bold uppercase tracking-tighter opacity-0 group-hover/icon:opacity-100 transition-opacity whitespace-nowrap print:opacity-100 print:text-zinc-400">{tool}</span>
                                         </div>
                                     ))}
 
@@ -496,13 +569,13 @@ export default function CurriculoPage() {
                                         <div key={payment.name} className="flex flex-col items-center gap-2 group/icon" title={payment.name}>
                                             <div className="w-12 h-12 bg-white/5 rounded-xl p-2.5 border border-white/10 group-hover/icon:border-accent/50 group-hover/icon:bg-accent/5 transition-all duration-300 flex items-center justify-center">
                                                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                                                <img 
-                                                    src={payment.url} 
-                                                    alt={payment.name} 
+                                                <img
+                                                    src={payment.url}
+                                                    alt={payment.name}
                                                     className="w-full h-full object-contain grayscale group-hover/icon:grayscale-0 transition-all duration-500"
                                                 />
                                             </div>
-                                            <span className="text-[9px] text-zinc-500 font-bold uppercase tracking-tighter opacity-0 group-hover/icon:opacity-100 transition-opacity whitespace-nowrap">{payment.name}</span>
+                                            <span className="text-[9px] text-zinc-500 font-bold uppercase tracking-tighter opacity-0 group-hover/icon:opacity-100 transition-opacity whitespace-nowrap print:opacity-100 print:text-zinc-400">{payment.name}</span>
                                         </div>
                                     ))}
                                 </div>
@@ -511,17 +584,17 @@ export default function CurriculoPage() {
                     </section>
 
                     {/* Idiomas */}
-                    <section className="mb-12 print-section">
+                    <section className="mb-12">
                         <h2 className="text-2xl font-bold flex items-center gap-3 mb-6 text-white">
                             <span className="w-8 h-1 bg-accent rounded-full block no-print" />
                             Idiomas
                         </h2>
-                        <div className="flex flex-col md:flex-row gap-6">
-                            <div className="flex-1 bg-zinc-950/50 border border-white/5 p-6 rounded-2xl print-bg-zinc print-border group hover:border-accent transition-colors duration-300">
+                        <div className="flex flex-col md:flex-row gap-6 print:flex-row print:gap-4">
+                            <div className="flex-1 bg-zinc-950/50 border border-white/5 p-6 rounded-2xl print-bg-zinc print-border group hover:border-accent transition-colors duration-300 print-card print:p-4">
                                 <h4 className="text-lg font-bold text-white mb-1">Português</h4>
                                 <p className="text-accent text-sm font-semibold tracking-wide uppercase">Nativo</p>
                             </div>
-                            <div className="flex-1 bg-zinc-950/50 border border-white/5 p-6 rounded-2xl print-bg-zinc print-border group hover:border-accent transition-colors duration-300">
+                            <div className="flex-1 bg-zinc-950/50 border border-white/5 p-6 rounded-2xl print-bg-zinc print-border group hover:border-accent transition-colors duration-300 print-card print:p-4">
                                 <h4 className="text-lg font-bold text-white mb-1">Inglês</h4>
                                 <p className="text-accent text-sm font-semibold tracking-wide uppercase mb-2">Intermediário Técnico</p>
                                 <p className="text-zinc-400 text-sm print-text-zinc">Leitura avançada de documentações e estudos técnicos/acadêmicos na <strong className="text-white">JALA University</strong>.</p>
