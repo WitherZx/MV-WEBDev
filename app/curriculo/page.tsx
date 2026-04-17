@@ -1,13 +1,11 @@
-import React from "react";
-import { Navbar } from "@/components/navbar";
-import { Instagram, Github, Mail, BrainCircuit, ArrowLeft, Briefcase } from "lucide-react";
+import { Instagram, Github, Mail, BrainCircuit, ArrowLeft, Briefcase, Bot, Smartphone, Globe, Sparkles } from "lucide-react";
 import { PrintButton } from "@/components/print-button";
 import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
-    title: "Currículo | MV WEB DEV",
-    description: "Frontend Engineer & Especialista em UI/UX",
+    title: "Currículo | Software Engineer & AI Specialist",
+    description: "Software Engineer & Especialista em IA",
 };
 
 export default function CurriculoPage() {
@@ -57,6 +55,10 @@ export default function CurriculoPage() {
                         background-clip: initial !important;
                         -webkit-text-fill-color: initial !important;
                     }
+                    img {
+                        filter: none !important;
+                        -webkit-filter: none !important;
+                    }
                 }
             `}} />
             <main className="relative bg-black text-white min-h-screen w-full pb-20 overflow-clip selection:bg-accent/40 selection:text-white font-sans">
@@ -96,21 +98,25 @@ export default function CurriculoPage() {
                             Marcos Vinicius
                         </h1>
                         <p className="text-xl md:text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-accent to-purple-400 mb-6 uppercase tracking-wider print-gradient-text">
-                            Frontend Engineer & Especialista UX/UI
+                            Software Engineer & AI Specialist
                         </p>
 
                         <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-zinc-400 font-medium mb-10 text-sm md:text-base">
                             <span className="flex items-center gap-2">
                                 <span className="w-2 h-2 rounded-full bg-accent" />
-                                Curitiba, Brasil
+                                📍 Curitiba/Piên, PR
                             </span>
                             <span className="flex items-center gap-2">
                                 <span className="w-2 h-2 rounded-full bg-accent" />
-                                7 Anos de Experiência
+                                🚀 +400 Projetos Entregues
                             </span>
                             <span className="flex items-center gap-2">
                                 <span className="w-2 h-2 rounded-full bg-accent" />
-                                Software Engineering (JALA)
+                                ⚙️ 7 Anos de Experiência
+                            </span>
+                            <span className="flex items-center gap-2">
+                                <span className="w-2 h-2 rounded-full bg-accent" />
+                                🎓 Software Engineering (JALA)
                             </span>
                         </div>
 
@@ -145,7 +151,100 @@ export default function CurriculoPage() {
                             Perfil Profissional
                         </h2>
                         <div className="bg-zinc-950/50 border border-white/5 p-6 md:p-8 rounded-2xl md:rounded-[2rem] text-zinc-300 leading-relaxed font-medium print-bg-zinc print-border print-text-zinc">
-                            Desenvolvedor Web Sênior e Engenheiro Front-End com quase 7 anos de atuação no mercado, unindo arquitetura de software de alta performance, inteligência artificial e uma <strong className="text-white">forte veia comercial em vendas de Software SaaS</strong>. Com trajetória recorrente na V4 Company (a maior assessoria de Growth do Brasil) e atualmente atuando na TEX4 com foco em expansão tecnológica, foco em construir ecossistemas que não apenas funcionam, mas performam como máquinas de lucro. Atualmente graduando-me em Software Engineering por uma universidade norte-americana (JALA University), alinhando minhas entregas aos padrões de qualidade do Vale do Silício.
+                            <p className="mb-6">
+                                Desenvolvedor desde os 16 anos, atuo como <strong className="text-white">Engenheiro de Software</strong> com foco na criação de ecossistemas complexos e aplicativos baseados em <strong className="text-white">Inteligência Artificial</strong>. Possuo forte veia empreendedora e foco em métricas de negócio.
+                            </p>
+                            <ul className="space-y-3">
+                                <li className="flex items-start gap-3">
+                                    <span className="text-accent mt-1">▹</span>
+                                    <span><strong className="text-white">Experiência:</strong> +7 anos de mercado (Freelance, Agências e Software Houses).</span>
+                                </li>
+                                <li className="flex items-start gap-3">
+                                    <span className="text-accent mt-1">▹</span>
+                                    <span><strong className="text-white">Entregas:</strong> +400 projetos executados (Sistemas, Apps, Landing Pages).</span>
+                                </li>
+                                <li className="flex items-start gap-3">
+                                    <span className="text-accent mt-1">▹</span>
+                                    <span><strong className="text-white">Especialidade Atual:</strong> Integração de LLMs (Gemini, OpenRouter) no core de aplicativos móveis e web.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    {/* Projetos em Destaque */}
+                    <section className="mb-12 print-section">
+                        <h2 className="text-2xl font-bold flex items-center gap-3 mb-8 text-white">
+                            <span className="w-8 h-1 bg-accent rounded-full block no-print" />
+                            Projetos em Destaque / Produtos Proprietários
+                        </h2>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            {/* RepTrail */}
+                            <div className="group relative bg-zinc-950/50 border border-white/5 p-6 rounded-3xl hover:border-accent/50 transition-all duration-500 overflow-hidden">
+                                <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-30 transition-opacity">
+                                    <Smartphone size={100} className="text-accent" />
+                                </div>
+                                <div className="relative z-10">
+                                    <div className="flex items-center gap-3 mb-4">
+                                        <div className="w-10 h-10 rounded-xl bg-accent/20 flex items-center justify-center">
+                                            <Smartphone size={20} className="text-accent" />
+                                        </div>
+                                        <h3 className="text-xl font-bold text-white uppercase tracking-tight">RepTrail</h3>
+                                    </div>
+                                    <p className="text-zinc-400 text-sm leading-relaxed mb-6 font-medium">
+                                        Ecossistema Fitness completo (Alunos e Personais). Utiliza <strong className="text-white">IA (OpenRouters)</strong> para geração automatizada de treinos e dietas personalizadas. Integração com sistema de afiliados.
+                                    </p>
+                                    <div className="flex flex-wrap gap-2 text-[10px] font-bold uppercase tracking-widest text-accent mb-6">
+                                        <span className="px-2 py-1 rounded-md bg-accent/10 border border-accent/20">Next.js</span>
+                                        <span className="px-2 py-1 rounded-md bg-accent/10 border border-accent/20">React</span>
+                                        <span className="px-2 py-1 rounded-md bg-accent/10 border border-accent/20">TypeScript</span>
+                                        <span className="px-2 py-1 rounded-md bg-accent/10 border border-accent/20">Tailwind</span>
+                                        <span className="px-2 py-1 rounded-md bg-accent/10 border border-accent/20">Supabase</span>
+                                        <span className="px-2 py-1 rounded-md bg-accent/10 border border-accent/20">OpenRouter</span>
+                                    </div>
+                                    <a 
+                                        href="https://reptrail.com.br" 
+                                        target="_blank" 
+                                        className="no-print inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-[10px] font-bold uppercase tracking-wider text-zinc-400 hover:text-accent hover:border-accent/50 hover:bg-accent/5 transition-all duration-300 group/btn"
+                                    >
+                                        Acessar Projeto
+                                        <Globe size={14} className="group-hover/btn:rotate-12 transition-transform" />
+                                    </a>
+                                </div>
+                            </div>
+
+                            {/* iaNow */}
+                            <div className="group relative bg-zinc-950/50 border border-white/5 p-6 rounded-3xl hover:border-accent/50 transition-all duration-500 overflow-hidden">
+                                <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-30 transition-opacity">
+                                    <Bot size={100} className="text-accent" />
+                                </div>
+                                <div className="relative z-10">
+                                    <div className="flex items-center gap-3 mb-4">
+                                        <div className="w-10 h-10 rounded-xl bg-accent/20 flex items-center justify-center">
+                                            <Bot size={20} className="text-accent" />
+                                        </div>
+                                        <h3 className="text-xl font-bold text-white uppercase tracking-tight">iaNow</h3>
+                                    </div>
+                                    <p className="text-zinc-400 text-sm leading-relaxed mb-6 font-medium">
+                                        Aplicativo jurídico alimentado pela <strong className="text-white">&quot;Minerva&quot;</strong> (IA proprietária baseada em Gemini Flash 2.1) para geração de contratos, minutas e estratégias processuais.
+                                    </p>
+                                    <div className="flex flex-wrap gap-2 text-[10px] font-bold uppercase tracking-widest text-accent mb-6">
+                                        <span className="px-2 py-1 rounded-md bg-accent/10 border border-accent/20">Next.js</span>
+                                        <span className="px-2 py-1 rounded-md bg-accent/10 border border-accent/20">React</span>
+                                        <span className="px-2 py-1 rounded-md bg-accent/10 border border-accent/20">TypeScript</span>
+                                        <span className="px-2 py-1 rounded-md bg-accent/10 border border-accent/20">Tailwind</span>
+                                        <span className="px-2 py-1 rounded-md bg-accent/10 border border-accent/20">Supabase</span>
+                                        <span className="px-2 py-1 rounded-md bg-accent/10 border border-accent/20">OpenRouter</span>
+                                    </div>
+                                    <a 
+                                        href="https://ianow.ia.br" 
+                                        target="_blank" 
+                                        className="no-print inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-[10px] font-bold uppercase tracking-wider text-zinc-400 hover:text-accent hover:border-accent/50 hover:bg-accent/5 transition-all duration-300 group/btn"
+                                    >
+                                        Acessar Projeto
+                                        <Globe size={14} className="group-hover/btn:rotate-12 transition-transform" />
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </section>
 
@@ -165,7 +264,7 @@ export default function CurriculoPage() {
                                 <h3 className="text-xl font-semibold text-white">B.S. in Software Engineering</h3>
                                 <div className="text-accent font-semibold text-sm mb-3">JALA University (EUA) • Cursando</div>
                                 <p className="text-zinc-400 font-medium leading-relaxed">
-                                    Formação focada no rigor técnico da engenharia de software norte-americana (Silicon Valley approach). Aprofundamento contínuo em arquiteturas escaláveis, clean code, algoritmos avançados, e integração de IA.
+                                    Formação focada no rigor técnico da engenharia de software norte-americana (<strong className="text-white">Silicon Valley approach</strong>). Aprofundamento contínuo em arquiteturas escaláveis, clean code, algoritmos avançados, e integração de IA.
                                 </p>
                             </div>
                         </div>
@@ -182,17 +281,31 @@ export default function CurriculoPage() {
 
                             <div className="relative md:pl-12 mb-10 group">
                                 <div className="hidden md:flex absolute left-0 top-1 w-8 h-8 rounded-full bg-black border-2 border-accent text-accent items-center justify-center font-bold text-xs z-10 shadow-[0_0_10px_rgba(116,40,245,0.5)]">
-                                    T4
+                                    HO
                                 </div>
-                                <h3 className="text-xl font-semibold text-white">SaaS Sales Specialist / Executivo de Vendas</h3>
-                                <div className="text-accent font-semibold text-sm mb-3">TEX4 • 2024 - Atual</div>
+                                <h3 className="text-xl font-semibold text-white">Co-Founder & Mobile/Web Dev</h3>
+                                <div className="text-accent font-semibold text-sm mb-3">H&O Apps • 2025</div>
                                 <p className="text-zinc-400 font-medium leading-relaxed mb-4">
-                                    Venda consultiva e estratégica de soluções tecnológicas SaaS. Atuação direta na expansão da base de clientes através da identificação de dores de negócio e apresentação de soluções de software de alto impacto.
+                                    Fundação de Software House focada em produtos de alta performance.
                                 </p>
                                 <ul className="list-disc list-outside ml-4 text-zinc-400 font-medium space-y-2">
-                                    <li>Abordagem técnica voltada à conversão de leads qualificados no segmento de tecnologia.</li>
-                                    <li>Construção de parcerias estratégicas baseadas na proposta de valor de ferramentas SaaS.</li>
-                                    <li>Análise de mercado para posicionamento de produtos digitais escaláveis.</li>
+                                    <li>Desenvolvimento ponta-a-ponta de <strong className="text-white">2 aplicativos proprietários</strong> de larga escala.</li>
+                                    <li>Liderança técnica e arquitetura de sistemas mobile utilizando <strong className="text-white">React Native e Expo</strong>.</li>
+                                </ul>
+                            </div>
+
+                            <div className="relative md:pl-12 mb-10 group">
+                                <div className="hidden md:flex absolute left-0 top-1 w-8 h-8 rounded-full bg-black border-2 border-accent text-accent items-center justify-center font-bold text-xs z-10 shadow-[0_0_10px_rgba(116,40,245,0.5)]">
+                                    FL
+                                </div>
+                                <h3 className="text-xl font-semibold text-white">SaaS Sales / Executivo de Vendas</h3>
+                                <div className="text-accent font-semibold text-sm mb-3">Fluxu • 2026</div>
+                                <p className="text-zinc-400 font-medium leading-relaxed mb-4">
+                                    Período imersivo em vendas B2B de Software como Serviço.
+                                </p>
+                                <ul className="list-disc list-outside ml-4 text-zinc-400 font-medium space-y-2">
+                                    <li>Trouxe <strong className="text-white">visão estratégica comercial</strong> e profundo entendimento das dores de clientes para aplicar na engenharia de software.</li>
+                                    <li>Otimização de processos de vendas através de <strong className="text-white">automações</strong> e ferramentas digitais.</li>
                                 </ul>
                             </div>
 
@@ -200,15 +313,14 @@ export default function CurriculoPage() {
                                 <div className="hidden md:flex absolute left-0 top-1 w-8 h-8 rounded-full bg-black border-2 border-accent text-accent items-center justify-center font-bold text-xs z-10 shadow-[0_0_10px_rgba(116,40,245,0.5)]">
                                     V4
                                 </div>
-                                <h3 className="text-xl font-semibold text-white">Desenvolvedor Web & Growth UI</h3>
-                                <div className="text-accent font-semibold text-sm mb-3">V4 Company • 2021-2022 | 2023-2024 | 2025-2026</div>
+                                <h3 className="text-xl font-semibold text-white">Web Developer Sênior</h3>
+                                <div className="text-accent font-semibold text-sm mb-3">V4 Company (Oxicore Fragoso) • 2021 - 2026 (Intermitente)</div>
                                 <p className="text-zinc-400 font-medium leading-relaxed mb-4">
-                                    Atuação imersiva na maior assessoria de Growth Marketing do Brasil, sendo requisitado em múltiplos ciclos para liderar a frente de conversão visual.
+                                    Atuação como CLT e terceirizado na unidade Oxicore da maior assessoria de Growth do Brasil.
                                 </p>
                                 <ul className="list-disc list-outside ml-4 text-zinc-400 font-medium space-y-2">
-                                    <li>Responsável por idealizar, testar (A/B) e codificar Landing Pages extremamente rápidas focadas no aumento massivo de Taxas de Conversão (CRO).</li>
-                                    <li>Alinhamento estratégico contínuo entre setores de tráfego, design e copywriting para implementar interfaces que destravavam gargalos de vendas e capitalizavam ROI.</li>
-                                    <li>Otimização rigorosa do fluxo do usuário e tracking do ecossistema de dados.</li>
+                                    <li>Desenvolvimento de <strong className="text-white">Interfaces de alta conversão (CRO)</strong> para grandes e-commerces e players do mercado nacional.</li>
+                                    <li>Implementação de <strong className="text-white">automações complexas</strong> e ecossistemas de dados para otimização de campanhas de tráfego.</li>
                                 </ul>
                             </div>
 
@@ -216,14 +328,14 @@ export default function CurriculoPage() {
                                 <div className="hidden md:flex absolute left-0 top-1 w-8 h-8 rounded-full bg-black border-2 border-accent text-accent items-center justify-center font-bold text-xs z-10 shadow-[0_0_10px_rgba(116,40,245,0.5)]">
                                     MV
                                 </div>
-                                <h3 className="text-xl font-semibold text-white">Engenheiro Front-End / Tech Lead</h3>
-                                <div className="text-accent font-semibold text-sm mb-3">MV WEB DEV (Freelance & Consultoria) • 2020 - Atual</div>
+                                <h3 className="text-xl font-semibold text-white">Tech Lead & Fullstack Dev</h3>
+                                <div className="text-accent font-semibold text-sm mb-3">Freelance • 2020 - Atual</div>
                                 <p className="text-zinc-400 font-medium leading-relaxed mb-4">
-                                    Liderança de uma iniciativa autônoma focada na construção de ecossistemas web complexos e arquiteturas de alta visibilidade internacional. Entregas rotineiras de alto padrão para mercados B2B e B2C.
+                                    Liderança técnica em projetos globais para clientes diretos e plataformas de freelancer.
                                 </p>
                                 <ul className="list-disc list-outside ml-4 text-zinc-400 font-medium space-y-2">
-                                    <li><strong className="text-white">Desenvolvimento Performático:</strong> Criação de plataformas estáveis (Next.js, React, WP) com métricas perfeitas no Google PageSpeed/Lighthouse (Echlin, Silvertrend, Solumade).</li>
-                                    <li><strong className="text-white">Engenharia de Conversão:</strong> Mapeamento de UI/UX focado em atração de leads e e-commerces de alto ticket baseados na psicologia das cores e gatilhos mentais visuais.</li>
+                                    <li><strong className="text-white">+400 projetos entregues</strong> via plataformas como Workana e 99Freelas.</li>
+                                    <li>Stack focada em ecossistemas web e apps escaláveis (<strong className="text-white">Next.js, AI, Supabase</strong>).</li>
                                 </ul>
                             </div>
                         </div>
@@ -231,35 +343,170 @@ export default function CurriculoPage() {
 
                     {/* Habilidades & Stack */}
                     <section className="mb-12 print-section">
-                        <h2 className="text-2xl font-bold flex items-center gap-3 mb-6 text-white">
+                        <h2 className="text-2xl font-bold flex items-center gap-3 mb-8 text-white">
                             <span className="w-8 h-1 bg-accent rounded-full block no-print" />
                             Hard Skills & Tecnologias
                         </h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-                            <div className="bg-white/5 border border-white/10 p-6 rounded-2xl hover:border-accent transition-colors duration-300 print-bg-zinc print-border">
-                                <h4 className="text-lg font-bold text-white mb-3">Linguagens & Core</h4>
-                                <p className="text-zinc-400 text-sm leading-relaxed print-text-zinc">React, Next.js, JavaScript, TypeScript, HTML5, CSS3, Estruturas SSR/SSG.</p>
-                            </div>
-
-                            <div className="bg-white/5 border border-white/10 p-6 rounded-2xl hover:border-accent transition-colors duration-300 print-bg-zinc print-border">
-                                <h4 className="text-lg font-bold text-white mb-3">Styling & UI</h4>
-                                <p className="text-zinc-400 text-sm leading-relaxed print-text-zinc">Tailwind CSS, Framer Motion, GSAP, Glassmorphism, Micro-interações, Design System.</p>
-                            </div>
-
-                            <div className="bg-white/5 border border-white/10 p-6 rounded-2xl hover:border-accent transition-colors duration-300 print-bg-zinc print-border">
-                                <h4 className="text-lg font-bold text-white mb-3 flex items-center gap-2">
-                                    <BrainCircuit size={18} className="text-accent" />
-                                    Inteligência Artificial & Automação
+                        
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            {/* Frontend & Mobile */}
+                            <div className="bg-zinc-950/40 border border-white/5 p-8 rounded-[2rem] hover:border-accent/20 transition-all duration-500 group relative overflow-hidden">
+                                <div className="absolute -top-24 -right-24 w-48 h-48 bg-accent/5 blur-[80px] rounded-full pointer-events-none group-hover:bg-accent/10 transition-all" />
+                                
+                                <h4 className="text-lg font-azonix font-normal text-white mb-8 flex items-center gap-3">
+                                    <Smartphone size={20} className="text-accent" />
+                                    Frontend & Mobile
                                 </h4>
-                                <p className="text-zinc-400 text-sm leading-relaxed print-text-zinc">Automatização de fluxos, Engenharia de Prompt, Modelos Generativos Visuais/Textuais, e criação de fluxos autônomos para escalabilidade de agências.</p>
+                                
+                                <div className="grid grid-cols-4 sm:grid-cols-5 gap-y-8 gap-x-4">
+                                    {[
+                                        { name: 'React', icon: 'react-original' },
+                                        { name: 'Next.js', icon: 'nextjs-original' },
+                                        { name: 'Native', icon: 'react-original' },
+                                        { name: 'TS', icon: 'typescript-original' },
+                                        { name: 'Tailwind', icon: 'tailwindcss-original' },
+                                        { name: 'HTML5', icon: 'html5-original' },
+                                        { name: 'CSS3', icon: 'css3-original' },
+                                        { name: 'Framer', icon: 'framermotion-original', url: 'https://cdn.brandfetch.io/framer.com/icon' } as { name: string; icon: string; url?: string; }
+                                    ].map((tech) => (
+                                        <div key={tech.name} className="flex flex-col items-center gap-2 group/icon pointer-events-auto" title={tech.name}>
+                                            <div className="w-12 h-12 bg-white/5 rounded-xl p-2.5 border border-white/10 group-hover/icon:border-accent/50 group-hover/icon:bg-accent/5 transition-all duration-300 flex items-center justify-center relative z-10">
+                                                {/* eslint-disable-next-line @next/next/no-img-element */}
+                                                <img 
+                                                    src={tech.url || `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${tech.icon.split('-')[0]}/${tech.icon}.svg`} 
+                                                    alt={tech.name} 
+                                                    className="w-full h-full object-contain grayscale group-hover/icon:grayscale-0 transition-all duration-500"
+                                                />
+                                            </div>
+                                            <span className="text-[9px] text-zinc-500 font-bold uppercase tracking-tighter opacity-0 group-hover/icon:opacity-100 transition-opacity whitespace-nowrap">{tech.name}</span>
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
 
-                            <div className="bg-white/5 border border-white/10 p-6 rounded-2xl hover:border-accent transition-colors duration-300 print-bg-zinc print-border">
-                                <h4 className="text-lg font-bold text-white mb-3">Ecossistema CMS & Growth</h4>
-                                <p className="text-zinc-400 text-sm leading-relaxed print-text-zinc">WordPress Avançado, Elementor Pro, WooCommerce, Shopify, Tray Commerce, e SEO Code-Level.</p>
+                            {/* Backend & Infra */}
+                            <div className="bg-zinc-950/40 border border-white/5 p-8 rounded-[2rem] hover:border-accent/20 transition-all duration-500 group relative overflow-hidden">
+                                <div className="absolute -top-24 -right-24 w-48 h-48 bg-purple-500/5 blur-[80px] rounded-full pointer-events-none group-hover:bg-purple-500/10 transition-all" />
+                                
+                                <h4 className="text-lg font-azonix font-normal text-white mb-8 flex items-center gap-3">
+                                    <Globe size={20} className="text-accent" />
+                                    Backend & Infra
+                                </h4>
+                                
+                                <div className="grid grid-cols-4 sm:grid-cols-5 gap-y-8 gap-x-4">
+                                    {[
+                                        { name: 'TS', icon: 'typescript-original' },
+                                        { name: 'Node.js', icon: 'nodejs-original' },
+                                        { name: 'Python', icon: 'python-original' },
+                                        { name: 'Supabase', icon: 'supabase-original' },
+                                        { name: 'Vercel', icon: 'vercel-original' },
+                                        { name: 'Cloudflare', icon: 'cloudflare-original' },
+                                        { name: 'PostgreSQL', icon: 'postgresql-original' }
+                                    ].map((tech) => (
+                                        <div key={tech.name} className="flex flex-col items-center gap-2 group/icon" title={tech.name}>
+                                            <div className="w-12 h-12 bg-white/5 rounded-xl p-3 border border-white/10 group-hover/icon:border-accent/50 group-hover/icon:bg-accent/5 transition-all duration-300 flex items-center justify-center">
+                                                {/* eslint-disable-next-line @next/next/no-img-element */}
+                                                <img 
+                                                    src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${tech.icon.split('-')[0]}/${tech.icon}.svg`} 
+                                                    alt={tech.name} 
+                                                    className={`w-full h-full object-contain grayscale group-hover/icon:grayscale-0 transition-all duration-500 ${tech.name === 'Vercel' ? 'p-0.5' : ''}`}
+                                                />
+                                            </div>
+                                            <span className="text-[9px] text-zinc-500 font-bold uppercase tracking-tighter opacity-0 group-hover/icon:opacity-100 transition-opacity whitespace-nowrap">{tech.name}</span>
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
 
+                            {/* Inteligência Artificial */}
+                            <div className="bg-zinc-950/40 border border-white/5 p-8 rounded-[2rem] hover:border-accent/20 transition-all duration-500 group relative overflow-hidden">
+                                <div className="absolute -top-24 -right-24 w-48 h-48 bg-blue-500/5 blur-[80px] rounded-full pointer-events-none group-hover:bg-blue-500/10 transition-all" />
+                                
+                                <h4 className="text-lg font-azonix font-normal text-white mb-8 flex items-center gap-3">
+                                    <BrainCircuit size={20} className="text-accent" />
+                                    IA Specialist
+                                </h4>
+                                
+                                <div className="grid grid-cols-4 sm:grid-cols-5 gap-y-8 gap-x-4">
+                                    {[
+                                        { name: 'OpenAI', icon: <Bot size={24} />, color: '#10a37f' },
+                                        { name: 'Gemini', icon: <Sparkles size={24} />, color: '#7428f5' },
+                                        { name: 'Router', icon: <BrainCircuit size={24} />, color: '#a855f7' },
+                                        { name: 'Claude', icon: <Sparkles size={24} />, color: '#d97706' }
+                                    ].map((tech) => (
+                                        <div key={tech.name} className="flex flex-col items-center gap-2 group/icon" title={tech.name}>
+                                            <div className="w-12 h-12 bg-white/5 rounded-xl p-2.5 border border-white/10 group-hover/icon:border-accent/50 group-hover/icon:bg-accent/5 transition-all duration-300 flex items-center justify-center">
+                                                <div className="text-zinc-400 group-hover/icon:scale-110 transition-transform duration-500" style={{ color: `var(--hover-color, inherit)` }}>
+                                                    {tech.icon}
+                                                </div>
+                                            </div>
+                                            <span className="text-[9px] text-zinc-500 font-bold uppercase tracking-tighter opacity-0 group-hover/icon:opacity-100 transition-opacity whitespace-nowrap">{tech.name}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+
+                            {/* CMS & Pagamentos - REDESIGNED */}
+                            <div className="bg-zinc-950/40 border border-white/5 p-8 rounded-[2rem] hover:border-accent/20 transition-all duration-500 group relative overflow-hidden md:col-span-1">
+                                <div className="absolute -top-24 -right-24 w-48 h-48 bg-emerald-500/5 blur-[80px] rounded-full pointer-events-none group-hover:bg-emerald-500/10 transition-all" />
+                                
+                                <h4 className="text-lg font-azonix font-normal text-white mb-8 flex items-center gap-3">
+                                    <Briefcase size={20} className="text-accent" />
+                                    CMS & Pagamentos
+                                </h4>
+                                
+                                <div className="grid grid-cols-4 sm:grid-cols-5 gap-y-8 gap-x-4">
+                                    {/* WP Core */}
+                                    {([
+                                        { name: 'WP', icon: 'wordpress-plain' },
+                                        { name: 'Woo', url: 'https://cdn.brandfetch.io/woocommerce.com/icon' },
+                                        { name: 'Elementor', icon: 'wordpress-plain' },
+                                        { name: 'ACF', icon: 'wordpress-plain' },
+                                    ] as { name: string; icon?: string; url?: string }[]).map((tech) => (
+                                        <div key={tech.name} className="flex flex-col items-center gap-2 group/icon" title={tech.name}>
+                                            <div className="w-12 h-12 bg-white/5 rounded-xl p-2.5 border border-white/10 group-hover/icon:border-accent/50 group-hover/icon:bg-accent/5 transition-all duration-300 flex items-center justify-center overflow-hidden">
+                                                {/* eslint-disable-next-line @next/next/no-img-element */}
+                                                <img 
+                                                    src={tech.url || `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${tech.icon?.split('-')[0]}/${tech.icon}.svg`} 
+                                                    alt={tech.name} 
+                                                    className="w-full h-full object-contain grayscale group-hover/icon:grayscale-0 transition-all duration-500"
+                                                />
+                                            </div>
+                                            <span className="text-[9px] text-zinc-500 font-bold uppercase tracking-tighter opacity-0 group-hover/icon:opacity-100 transition-opacity whitespace-nowrap">{tech.name}</span>
+                                        </div>
+                                    ))}
+
+                                    {/* WP Advanced as "Icon Blocks" */}
+                                    {['CPT UI', 'Croco'].map(tool => (
+                                        <div key={tool} className="flex flex-col items-center gap-2 group/icon" title={tool}>
+                                            <div className="w-12 h-12 bg-white/5 rounded-xl border border-white/10 group-hover/icon:border-accent/50 group-hover/icon:bg-accent/5 transition-all duration-300 flex items-center justify-center">
+                                                <span className="text-[10px] font-black text-zinc-500 group-hover/icon:text-accent transition-colors leading-none text-center px-1">
+                                                    {tool}
+                                                </span>
+                                            </div>
+                                            <span className="text-[9px] text-zinc-500 font-bold uppercase tracking-tighter opacity-0 group-hover/icon:opacity-100 transition-opacity whitespace-nowrap">{tool}</span>
+                                        </div>
+                                    ))}
+
+                                    {/* Payments - In the same grid */}
+                                    {[
+                                        { name: 'Stripe', url: 'https://cdn.brandfetch.io/stripe.com/icon' },
+                                        { name: 'Asaas', url: 'https://cdn.brandfetch.io/asaas.com/icon' }
+                                    ].map((payment) => (
+                                        <div key={payment.name} className="flex flex-col items-center gap-2 group/icon" title={payment.name}>
+                                            <div className="w-12 h-12 bg-white/5 rounded-xl p-2.5 border border-white/10 group-hover/icon:border-accent/50 group-hover/icon:bg-accent/5 transition-all duration-300 flex items-center justify-center">
+                                                {/* eslint-disable-next-line @next/next/no-img-element */}
+                                                <img 
+                                                    src={payment.url} 
+                                                    alt={payment.name} 
+                                                    className="w-full h-full object-contain grayscale group-hover/icon:grayscale-0 transition-all duration-500"
+                                                />
+                                            </div>
+                                            <span className="text-[9px] text-zinc-500 font-bold uppercase tracking-tighter opacity-0 group-hover/icon:opacity-100 transition-opacity whitespace-nowrap">{payment.name}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
                         </div>
                     </section>
 
@@ -270,14 +517,14 @@ export default function CurriculoPage() {
                             Idiomas
                         </h2>
                         <div className="flex flex-col md:flex-row gap-6">
-                            <div className="flex-1 bg-zinc-950/50 border border-white/5 p-6 rounded-2xl print-bg-zinc print-border">
+                            <div className="flex-1 bg-zinc-950/50 border border-white/5 p-6 rounded-2xl print-bg-zinc print-border group hover:border-accent transition-colors duration-300">
                                 <h4 className="text-lg font-bold text-white mb-1">Português</h4>
                                 <p className="text-accent text-sm font-semibold tracking-wide uppercase">Nativo</p>
                             </div>
-                            <div className="flex-1 bg-zinc-950/50 border border-white/5 p-6 rounded-2xl print-bg-zinc print-border">
+                            <div className="flex-1 bg-zinc-950/50 border border-white/5 p-6 rounded-2xl print-bg-zinc print-border group hover:border-accent transition-colors duration-300">
                                 <h4 className="text-lg font-bold text-white mb-1">Inglês</h4>
-                                <p className="text-accent text-sm font-semibold tracking-wide uppercase mb-2">Avançado / Intermediário Superior</p>
-                                <p className="text-zinc-400 text-sm print-text-zinc">Leitura & Documentação (Avançado), Comunicação Técnica e Acadêmica de forma eficiente devido à vivência na JALA University.</p>
+                                <p className="text-accent text-sm font-semibold tracking-wide uppercase mb-2">Intermediário Técnico</p>
+                                <p className="text-zinc-400 text-sm print-text-zinc">Leitura avançada de documentações e estudos técnicos/acadêmicos na <strong className="text-white">JALA University</strong>.</p>
                             </div>
                         </div>
                     </section>
