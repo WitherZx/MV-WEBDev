@@ -400,7 +400,7 @@ export default function CurriculoPage() {
                                 <div className="hidden md:flex absolute left-0 top-1 w-8 h-8 rounded-full bg-black border-2 border-accent text-accent items-center justify-center font-bold text-xs z-10 shadow-[0_0_10px_rgba(116,40,245,0.5)]">
                                     V4
                                 </div>
-                                <h3 className="text-xl font-semibold text-white">Web Developer Sênior</h3>
+                                <h3 className="text-xl font-semibold text-white">Web Developer Pleno</h3>
                                 <div className="text-accent font-semibold text-sm mb-3">V4 Company (Oxicore Fragoso) • 2021 - 2026 (Intermitente)</div>
                                 <p className="text-zinc-400 font-medium leading-relaxed mb-4">
                                     Atuação como CLT e terceirizado na unidade Oxicore da maior assessoria de Growth do Brasil.
