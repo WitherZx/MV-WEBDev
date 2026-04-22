@@ -371,7 +371,7 @@ export default function CurriculoPage() {
                                     HO
                                 </div>
                                 <h3 className="text-xl font-semibold text-white">Co-Founder & Mobile/Web Dev</h3>
-                                <div className="text-accent font-semibold text-sm mb-3">H&O Apps • 2025</div>
+                                <div className="text-accent font-semibold text-sm mb-3">H&O Apps • 2025 - 2026</div>
                                 <p className="text-zinc-400 font-medium leading-relaxed mb-4">
                                     Fundação de Software House focada em produtos de alta performance.
                                 </p>
