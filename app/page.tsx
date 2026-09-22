@@ -35,8 +35,6 @@ export default function Home() {
 
           <BentoFeatures />
 
-          <ProductReveal />
-
           <TechMarquee />
 
           <HorizontalGallery />
@@ -64,7 +62,7 @@ export default function Home() {
                   target="_blank"
                   className="magic-button flex items-center justify-center gap-2 md:gap-3 px-8 py-4 md:px-14 md:py-6 text-sm md:text-2xl font-semibold uppercase tracking-widest shadow-[0_0_40px_rgba(116,40,245,0.4)] relative z-10 w-full sm:w-auto"
                 >
-                  Agendar Mentoria / Reunião
+                  Agendar Reunião
                 </a>
               </div>
             </div>
@@ -103,7 +101,7 @@ export default function Home() {
                 <a href="mailto:marcos.contatoprof@gmail.com" className="p-3 md:p-4 rounded-full border border-white/5 bg-white/5 hover:bg-accent hover:text-white hover:border-accent hover:shadow-[0_0_20px_rgba(116,40,245,0.4)] hover:-translate-y-1 transition-all duration-300">
                   <Mail size={20} />
                 </a>
-                <a href="https://instagram.com/_devmarcos" target="_blank" className="p-3 md:p-4 rounded-full border border-white/5 bg-white/5 hover:bg-accent hover:text-white hover:border-accent hover:shadow-[0_0_20px_rgba(116,40,245,0.4)] hover:-translate-y-1 transition-all duration-300">
+                <a href="https://instagram.com/odevmarcos" target="_blank" className="p-3 md:p-4 rounded-full border border-white/5 bg-white/5 hover:bg-accent hover:text-white hover:border-accent hover:shadow-[0_0_20px_rgba(116,40,245,0.4)] hover:-translate-y-1 transition-all duration-300">
                   <Instagram size={20} />
                 </a>
                 <a href="https://github.com/WitherZx" target="_blank" className="p-3 md:p-4 rounded-full border border-white/5 bg-white/5 hover:bg-accent hover:text-white hover:border-accent hover:shadow-[0_0_20px_rgba(116,40,245,0.4)] hover:-translate-y-1 transition-all duration-300">
